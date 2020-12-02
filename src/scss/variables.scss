@@ -10,9 +10,11 @@ $gray-light:                  hsl(0, 0%, 60%);
 $gray-lighten:                hsl(0, 0%, 70%);
 $gray-lighter:                hsl(0, 0%, 80%);
 $gray-lightest:               hsl(0, 0%, 90%);
-$white:                       hsl(0, 0%, 100%);
-$light-grey:                  rgba(70, 0, 10, 0.08);
-$lighten-grey:                rgba(50, 0, 0, 0.05);
+
+$white:                       #FFFAF2;
+$light-grey:                  rgba(0, 0, 0, 0.05);
+$lighten-grey:                rgba(242, 237, 230, 1);
+$light-peach:                 rgba(251, 243, 234, 1);
 
 $color-main:                  hsl(208, 98%, 43%);
 $color-success:               hsl(120, 39%, 54%);

@@ -1,0 +1,41 @@
+//- Все примеси в этом файле должны начинаться c имени блока (mojo-about)
+
+mixin mojo-about(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +mojo-about('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' mojo-about--' + modsList[i].trim();
+      }
+    }
+
+  .mojo-about(class=allMods)&attributes(attributes)
+    .mojo-about__logo-wrapper
+      +logo(false)
+        img(src='img/logo.svg', alt='Logo', width='81', height='21')
+    ul.mojo-about__list
+      li.mojo-about__item
+        .mojo-about__inner
+          h2.mojo-about__main-title Как родилась идея?
+          p.mojo-about__text «Этой весной я готовила много разной выпечки и делилась рецептами с подписчиками, — рассказывает Саша Новикова, основатель проекта о здоровом образе жизни How to Green и сервиса доставки здорового питания How to Eat. — Женя Цырлин, основательница бренда Mojo Cacao, приготовила банановый хлеб по моему рецепту и после этого предложила мне поучаствовать в создании шоколада с таким вкусом.
+          p.mojo-about__text Я сразу согласилась, потому что мне очень нравится продукция Mojo Cacao».
+        img.mojo-about__img(src="img/mojo-cacao@1x.jpg" width="642" height="520")
+      li.mojo-about__item
+        .mojo-about__inner
+          h2.mojo-about__main-title Что за вкус?
+          p.mojo-about__text Шоколад Banana bread — это больше чем перекус и полезное лакомство для сладкоежек. Вкус переносит на кухню, наполненную ароматом свежей выпечки, и дарит ощущение домашнего уюта и праздника, когда близкие люди собираются вместе.
+          p.mojo-about__text Один квадратик шоколадной плитки как кусочек бананового хлеба, покрытого хрустящей золотисто-карамельной корочкой и влажного внутри.
+        img.mojo-about__img(src="img/banana-bread@1x.jpg" width="642" height="520")
+    .mojo-about__wrapper
+      h2.mojo-about__title Все коллекции нашей продукции в полном  каталоге
+      a.mojo-about__catalog-link(href="#") Перейти к каталогу
+

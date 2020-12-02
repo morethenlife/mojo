@@ -1,0 +1,49 @@
+// В этом файле должны быть стили для БЭМ-блока privacy, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.privacy {
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 200px 0;
+
+  &__logo-wrapper {
+    margin-bottom: -53px;
+    @include container();
+  }
+
+  &__main-title {
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  &__wrapper {
+    @include container();
+    padding: 0 195px;
+  }
+
+  &__list {
+    @include reset-list;
+  }
+
+  &__item {
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    margin: 0;
+
+    &--margin {
+      margin-bottom: 25px;
+    }
+  }
+}

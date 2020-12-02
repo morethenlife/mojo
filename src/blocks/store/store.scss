@@ -20,6 +20,8 @@
     font-size: 28px;
     line-height: 28px;
     font-weight: 400;
+    margin: 0;
+    margin-bottom: 25px;
   }
 
   p {
@@ -33,5 +35,11 @@
 
   &__logo-wrapper {
     margin-right: 100px;
+
+    .logo{
+      img {
+        margin-top: 0;
+      }
+    }
   }
 }

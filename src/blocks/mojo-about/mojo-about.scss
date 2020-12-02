@@ -1,0 +1,71 @@
+// В этом файле должны быть стили для БЭМ-блока mojo-about, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.mojo-about {
+  $block-name:                &; // #{$block-name}__element
+
+  margin-top: 200px;
+  margin-bottom: 100px;
+
+  &__logo-wrapper {
+    @include container();
+    margin-bottom: -182px;
+  }
+
+  &__main-title {
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    @include reset-list;
+    @include container();
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    margin-bottom: 160px;
+    padding: 0 198px;
+  }
+
+  &__img {
+    display: block;
+    margin-left: 250px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      img {
+        margin-left: 0;
+        margin-right: 250px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 160px;
+    }
+  }
+
+  &__wrapper {
+    background-color: $light-peach;
+    padding: 165px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__catalog-link {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+  }
+}

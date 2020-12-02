@@ -1,0 +1,17 @@
+extends ../pug/layout.pug
+
+block meta
+  title Mojo
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+block nav
+  +navigation
+
+block content
+  +privacy
+
+//- //- block append page-bottom
+//- //-   script(src='js/some.js')

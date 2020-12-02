@@ -12,12 +12,13 @@
     @include container();
 
     margin-top: 200px;
-    margin-bottom: -110px;
+    margin-bottom: -114px;
   }
 
   &__title {
     font-size: 28px;
     line-height: 28px;
+    font-weight: 400;
     margin: 0;
     margin-bottom: 25px;
   }
@@ -28,7 +29,7 @@
 
   &__item {
     &:nth-child(even) {
-      background-color: rgba(150, 0, 0, 0.05);
+      background-color: $light-peach;
     }
   }
 

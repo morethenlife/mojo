@@ -7,17 +7,13 @@
   $block-name:                &; // #{$block-name}__element
 
   @include container();
-
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-  }
+  display: flex;
+  margin-top: 200px;
 
   &__list {
     @include reset-list;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    margin-right: 100px;
+    margin-bottom: 340px;
   }
 
   &__title {
@@ -33,5 +29,9 @@
   &__adress,
   &__tel {
     display: block;
+  }
+
+  &__logo-wrapper {
+    margin-right: 100px;
   }
 }

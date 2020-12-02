@@ -1,0 +1,57 @@
+// В этом файле должны быть стили для БЭМ-блока press, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.press {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 50px;
+
+  &__logo-wrapper {
+    @include container();
+
+    margin-top: 200px;
+    margin-bottom: -110px;
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 28px;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    @include reset-list;
+  }
+
+  &__item {
+    &:nth-child(even) {
+      background-color: rgba(150, 0, 0, 0.05);
+    }
+  }
+
+  &__item-inner {
+    @include container();
+
+    padding: 0 195px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    display: block;
+    padding: 50px 0;
+    margin-left: 290px;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__link {
+    display: block;
+    margin-top: 60px;
+  }
+}

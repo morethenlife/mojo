@@ -2,14 +2,21 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.page-header__logo {
+.logo {
 
   $block-name:                &; // #{$block-name}__element
 
   display: inline-block;
   white-space: nowrap;
 
+  // @include container();
+
   img {
     display: block;
+    margin: 25px 0;
+  }
+
+  &__wrapper {
+    @include container();
   }
 }

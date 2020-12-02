@@ -35,16 +35,27 @@
       }
     }
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 21px;
-      height: 21px;
-      top: 14px;
-      right: 16px;
-      background-color: #ffffff;
-      border-radius: 50%;
-    }
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   width: 21px;
+    //   height: 21px;
+    //   top: 14px;
+    //   right: 16px;
+    //   background-color: #ffffff;
+    //   border-radius: 50%;
+    // }
+  }
+
+  &__select {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 14px;
+    right: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 1;
   }
 
   &__title {

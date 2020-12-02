@@ -360,7 +360,7 @@ function serve() {
     server: dir.build,
     port: 8080,
     startPath: 'index.html',
-    open: true,
+    open: false,
     notify: false,
   });
 

@@ -1,0 +1,73 @@
+//- Все примеси в этом файле должны начинаться c имени блока (press)
+
+mixin press(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +press('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' press--' + modsList[i].trim();
+      }
+    }
+
+  .press(class=allMods)&attributes(attributes)
+    .press__logo-wrapper
+      +logo(false)
+        img(src='img/logo.svg', alt='Logo', width='81', height='21')
+    ul.press__list
+      li.press__item
+        .press__item-inner
+          .press__wrapper
+            h2.press__title MEDUZA
+            p.press__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate dignissim suspendisse in est ante. Amet aliquam id diam maecenas ultricies mi.
+            p.press__text Ac turpis egestas maecenas pharetra convallis posuere. Sed velit dignissim sodales ut.
+            p.press__text A lacus vestibulum sed arcu non. Mi bibendum neque egestas congue. Feugiat in fermentum posuere urna nec tincidunt praesent. Elit pellentesque habitant morbi tristique senectus et netus.
+            p.press__text Augue eget arcu dictum varius duis at consectetur. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Duis tristique sollicitudin nibh sit amet commodo nulla. Habitant morbi tristique senectus et netus et malesuada fames ac.
+            p.press__text Quis imperdiet massa tincidunt nunc. In fermentum et sollicitudin ac. Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra.
+            a.press__link(href="#")
+              img(src="img/arrow-link.svg" width="30" height="13")
+          img.press__img(src="img/press-photo-cacao@1x.jpg" width="440" height="440" alt="Кромовый какао")
+      li.press__item
+        .press__item-inner
+          .press__wrapper
+            h2.press__title VC.RU
+            p.press__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate dignissim suspendisse in est ante. Amet aliquam id diam maecenas ultricies mi.
+            p.press__text Ac turpis egestas maecenas pharetra convallis posuere. Sed velit dignissim sodales ut.
+            p.press__text A lacus vestibulum sed arcu non. Mi bibendum neque egestas congue. Feugiat in fermentum posuere urna nec tincidunt praesent. Elit pellentesque habitant morbi tristique senectus et netus.
+            p.press__text Augue eget arcu dictum varius duis at consectetur. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Duis tristique sollicitudin nibh sit amet commodo nulla. Habitant morbi tristique senectus et netus et malesuada fames ac.
+            p.press__textQuis imperdiet massa tincidunt nunc. In fermentum et sollicitudin ac. Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra.
+            a.press__link(href="#")
+              img(src="img/arrow-link.svg" width="30" height="13")
+          img.press__img(src="img/press-photo-choco@1x.jpg" width="440" height="440" alt="Шоколад")
+      li.press__item
+        .press__item-inner
+          .press__wrapper
+            h2.press__title MEDUZA
+            p.press__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate dignissim suspendisse in est ante. Amet aliquam id diam maecenas ultricies mi.
+            p.press__text Ac turpis egestas maecenas pharetra convallis posuere. Sed velit dignissim sodales ut.
+            p.press__text A lacus vestibulum sed arcu non. Mi bibendum neque egestas congue. Feugiat in fermentum posuere urna nec tincidunt praesent. Elit pellentesque habitant morbi tristique senectus et netus.
+            p.press__text Augue eget arcu dictum varius duis at consectetur. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Duis tristique sollicitudin nibh sit amet commodo nulla. Habitant morbi tristique senectus et netus et malesuada fames ac.
+            p.press__text Quis imperdiet massa tincidunt nunc. In fermentum et sollicitudin ac. Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra.
+            a.press__link(href="#")
+              img(src="img/arrow-link.svg" width="30" height="13")
+          img.press__img(src="img/press-photo-cacao@1x.jpg" width="440" height="440" alt="Кромовый какао")
+      li.press__item
+        .press__item-inner
+          .press__wrapper
+            h2.press__title VC.RU
+            p.press__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate dignissim suspendisse in est ante. Amet aliquam id diam maecenas ultricies mi.
+            p.press__text Ac turpis egestas maecenas pharetra convallis posuere. Sed velit dignissim sodales ut.
+            p.press__text A lacus vestibulum sed arcu non. Mi bibendum neque egestas congue. Feugiat in fermentum posuere urna nec tincidunt praesent. Elit pellentesque habitant morbi tristique senectus et netus.
+            p.press__text Augue eget arcu dictum varius duis at consectetur. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Duis tristique sollicitudin nibh sit amet commodo nulla. Habitant morbi tristique senectus et netus et malesuada fames ac.
+            p.press__textQuis imperdiet massa tincidunt nunc. In fermentum et sollicitudin ac. Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra.
+            a.press__link(href="#")
+              img(src="img/arrow-link.svg" width="30" height="13")
+          img.press__img(src="img/press-photo-choco@1x.jpg" width="440" height="440" alt="Шоколад")

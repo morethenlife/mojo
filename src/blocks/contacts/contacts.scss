@@ -1,0 +1,57 @@
+// В этом файле должны быть стили для БЭМ-блока contacts, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.contacts {
+
+  $block-name:                &; // #{$block-name}__element
+  margin-top: 70px;
+
+  &__tel-link,
+  &__mail-link {
+    display: block;
+    color: rgba(0, 0, 0, 0.5);
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+  }
+
+  &__info {
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  &__mail-link {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    @include reset-list;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-right: 15px;
+  }
+
+  &__social-link {
+    img {
+      display: block;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    @include hide-text;
+  }
+}

@@ -11,6 +11,8 @@ $gray-lighten:                hsl(0, 0%, 70%);
 $gray-lighter:                hsl(0, 0%, 80%);
 $gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
+$light-grey:                  rgba(242, 237, 230, 1);
+$lighten-grey:                #f2eeec;
 
 $color-main:                  hsl(208, 98%, 43%);
 $color-success:               hsl(120, 39%, 54%);
@@ -26,7 +28,7 @@ $color-gh:                    #24292e;
 
 // Семантические цвета
 
-$text-color:                  $gray-darkest;
+$text-color:                  $black;
 $text-color-muted:            $gray;
 $body-bg:                     $white;
 
@@ -34,12 +36,14 @@ $link-color:                  $color-main;
 $link-color--hover:           darken($color-main, 15%);
 
 $border-color:                $gray-lighten;
+$block-bg-color:              $light-grey;
+$block-hover-color:           $lighten-grey;
 
 
 
 // Базовая типографика
 
-$font-size:                   16px;
+$font-size:                   14px;
 
 $font-size-h1:                40px;
 $font-size-h2:                32px;
@@ -50,11 +54,11 @@ $font-size-h6:                16px;
 
 $font-size-sm:                0.75em; // 12px от 16px
 
-$line-height:                 1.5;
+$line-height:                 21px;
 
 $typo-margin-vertical:        1em;
 
-$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family:                'GigaSans', 'Arial', sans-serif;
 $font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 // Georgia, Times New Roman, Times, serif
 
@@ -80,14 +84,14 @@ $container-xxl:               $screen-xxl - 30;
 // Модульная сетка
 
 $grid-columns:                12;
-$grid-gutter-width:           30px;
+$grid-gutter-width:           90px;
 
 
 
 // Разное
 
-$field-padding-vertical:      5px;
-$field-padding-horizontal:    12px;
+$field-padding-vertical:      11px;
+$field-padding-horizontal:    43px;
 
 $border-radius:               3px;
 $opacity:                     0.7;

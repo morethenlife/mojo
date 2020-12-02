@@ -1,0 +1,39 @@
+//- Все примеси в этом файле должны начинаться c имени блока (faq)
+
+mixin faq(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +faq('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' faq--' + modsList[i].trim();
+      }
+    }
+
+  .page-footer__faq.faq(class=allMods)&attributes(attributes)
+    .faq__inner
+      h2.faq__title FAQS
+      ul.faq__list
+        li.faq__item
+          a.faq__link Информация
+        li.faq__item
+          a.faq__link.faq__link--active Оплата
+        li.faq__item
+          a.faq__link Доставка
+        li.faq__item
+          a.faq__link Возврат
+        li.faq__item
+          a.faq__link Подарочные карты
+        li.faq__item
+          a.faq__link Бонусная программа
+        li.faq__item
+          a.faq__link Политика конфиденциальности
+

@@ -1,0 +1,82 @@
+// В этом файле должны быть стили для БЭМ-блока goods, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.goods {
+  $block-name:                &; // #{$block-name}__element
+
+  @include container();
+
+  &__list {
+    @include reset-list;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex-basis: 25%;
+    position: relative;
+
+    margin-bottom: 20px;
+
+    img {
+      display: block;
+      margin-bottom: 100px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $block-hover-color;
+      cursor: pointer;
+
+      .goods__inner {
+        display: block;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 21px;
+      height: 21px;
+      top: 14px;
+      right: 16px;
+      background-color: #ffffff;
+      border-radius: 50%;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    text-align: center;
+
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 30px;
+  }
+
+  &__weight,
+  &__price {
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__weight {
+    margin-right: 1.8em;
+  }
+
+  &__inner {
+    display: none;
+    margin-top: -95px;
+  }
+}

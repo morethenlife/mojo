@@ -1,0 +1,40 @@
+//- Все примеси в этом файле должны начинаться c имени блока (contacts)
+
+mixin contacts(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +contacts('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' contacts--' + modsList[i].trim();
+      }
+    }
+
+  .page-footer__contacts.contacts(class=allMods)&attributes(attributes)
+    img(src="img/logo.svg" alt="Логотип" width="45" height="12")
+    p.contacts__info Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    a.contacts__tel-link(tel="8 999 999 99 99") 8 999 999 99 99
+    a.contacts__mail-link(mailto="sayhi@mojo.ru") sayhi@mojo.ru
+    ul.contacts__list
+      li.contacts__item
+        a.contacts__social-link
+          img(src="img/instagram.svg" width="16" height="16")
+          span.contacts__text Инстаграм
+      li.contacts__item
+        a.contacts__social-link
+          img(src="img/youtube.svg" width="22" height="16")
+          span.contacts__text Ютуб
+      li.contacts__item
+        a.contacts__social-link
+          img(src="img/pinterest.svg" width="13" height="16")
+          span.contacts__text Пинтерест
+
+

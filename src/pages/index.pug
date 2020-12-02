@@ -1,18 +1,18 @@
 extends ../pug/layout.pug
 
 block meta
-  title Главная
+  title Mojo
   meta(name='description', content='')
 
-//- block append head
-//-   link(rel='stylesheet', href='css/some.css')
+block append head
+  link(rel='stylesheet', href='css/some.css')
 
-block nav
-  +main-nav('10')
+//- block nav
+//-   +navigation
 
-block content
-  h1 Заголовок
-  p Содержимое. #[a(href='blocks-demo.html') Библиотека блоков].
+//- block content
+//-   h1 Заголовок
+//-   p Содержимое. #[a(href='blocks-demo.html') Библиотека блоков].
 
 //- block footer
 //-   p footer

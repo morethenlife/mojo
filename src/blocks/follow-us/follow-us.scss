@@ -1,0 +1,49 @@
+// В этом файле должны быть стили для БЭМ-блока follow-us, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.follow-us {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    input {
+      width: 466px;
+      padding: 22px 90px;
+      margin-bottom: 30px;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__form::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__info {
+    margin: 0;
+    margin-bottom: 50px;
+
+    a {
+      color: rgba(0, 0, 0, 0.5);
+      margin-left: 5px;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+    }
+  }
+}

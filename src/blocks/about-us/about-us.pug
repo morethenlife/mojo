@@ -1,0 +1,30 @@
+//- Все примеси в этом файле должны начинаться c имени блока (about-us)
+
+mixin about-us(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +about-us('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' about-us--' + modsList[i].trim();
+      }
+    }
+
+  .page-footer__about-us.about-us(class=allMods)&attributes(attributes)
+    .about-us__inner
+      h2.about-us__title Компания
+      ul.about-us__list
+        li.about-us__item
+          a.about-us__link Про MOJO
+        li.about-us__item
+          a.about-us__link Контакты
+        li.about-us__item
+          a.about-us__link Карьера

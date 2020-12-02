@@ -1,0 +1,106 @@
+//- Все примеси в этом файле должны начинаться c имени блока (goods)
+
+mixin goods(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +goods('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' goods--' + modsList[i].trim();
+      }
+    }
+
+  .goods(class=allMods)&attributes(attributes)
+    ul.goods__list
+      li.goods__item
+        img(src="img/paste-creamy@1x.png" alt="Крем-паста")
+        .goods__inner
+          h3.goods__title Паста со вкусом ореха кешью
+          .goods__wrapper
+            span.goods__weight 200 гр
+            span.goods__price 400 ₽
+      li.goods__item
+        img(src="img/paste-popcorn@1x.png" alt="Попкорн-паста")
+        .goods__inner
+          h3.goods__title Паста со вкусом ореха кешью
+          .goods__wrapper
+            span.goods__weight 200 гр
+            span.goods__price 400 ₽
+      li.goods__item
+        img(src="img/paste-creamy@1x.png" alt="Крем-паста")
+        .goods__inner
+          h3.goods__title Паста со вкусом ореха кешью
+          .goods__wrapper
+            span.goods__weight 200 гр
+            span.goods__price 400 ₽
+      li.goods__item
+        img(src="img/paste-cookie@1x.png" alt="Бисквит-паста")
+        .goods__inner
+          h3.goods__title Паста со вкусом ореха кешью
+          .goods__wrapper
+            span.goods__weight 200 гр
+            span.goods__price 400 ₽
+      li.goods__item
+        img(src="img/paste-creamy@1x.png" alt="Крем-паста")
+        .goods__inner
+          h3.goods__title Паста со вкусом ореха кешью
+          .goods__wrapper
+            span.goods__weight 200 гр
+            span.goods__price 400 ₽
+      li.goods__item
+        img(src="img/paste-popcorn@1x.png" alt="Попкорн-паста")
+        .goods__inner
+          h3.goods__title Паста со вкусом ореха кешью
+          .goods__wrapper
+            span.goods__weight 200 гр
+            span.goods__price 400 ₽
+      li.goods__item
+        img(src="img/paste-creamy@1x.png" alt="Крем-паста")
+        .goods__inner
+          h3.goods__title Паста со вкусом ореха кешью
+          .goods__wrapper
+            span.goods__weight 200 гр
+            span.goods__price 400 ₽
+      li.goods__item
+        img(src="img/paste-cookie@1x.png" alt="Бисквит-паста")
+        .goods__inner
+          h3.goods__title Паста со вкусом ореха кешью
+          .goods__wrapper
+            span.goods__weight 200 гр
+            span.goods__price 400 ₽
+      li.goods__item
+        img(src="img/paste-creamy@1x.png" alt="Крем-паста")
+        .goods__inner
+          h3.goods__title Паста со вкусом ореха кешью
+          .goods__wrapper
+            span.goods__weight 200 гр
+            span.goods__price 400 ₽
+      li.goods__item
+        img(src="img/paste-popcorn@1x.png" alt="Попкорн-паста")
+        .goods__inner
+          h3.goods__title Паста со вкусом ореха кешью
+          .goods__wrapper
+            span.goods__weight 200 гр
+            span.goods__price 400 ₽
+      li.goods__item
+        img(src="img/paste-creamy@1x.png" alt="Крем-паста")
+        .goods__inner
+          h3.goods__title Паста со вкусом ореха кешью
+          .goods__wrapper
+            span.goods__weight 200 гр
+            span.goods__price 400 ₽
+      li.goods__item
+        img(src="img/paste-cookie@1x.png" alt="Бисквит-паста")
+        .goods__inner
+          h3.goods__title Паста со вкусом ореха кешью
+          .goods__wrapper
+            span.goods__weight 200 гр
+            span.goods__price 400 ₽

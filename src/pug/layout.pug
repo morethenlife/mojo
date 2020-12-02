@@ -36,22 +36,25 @@ html(class='page  no-js', lang='ru')
   body
     noscript У вас отключен JavaScript. Это пугает.
 
-    .page__inner
-      .page__content
+    +page-header()
+      .page-header__wrapper
+        block nav
+        +cart()
 
-        +page-header()
-          +logo('/')
-            img(src='img/demo-logo.svg', alt='Logo', width='64', height='15')
-          block nav
+      +logo(false)
+        img.page-header__logo(src='img/logo.svg', alt='Logo', width='81', height='21')
 
-        block content
-          p содержимое
 
-      .page__footer-wrapper
-        +page-footer()
-          block footer
-            p «Подвал»
-            p Контактный телефон: #[a(href='tel:+70000000000') +7 000 000 00 00]
+    block content
 
-    block page-bottom
-      script(src='js/bundle.js')
+    +page-footer()
+      .page-footer__wrapper
+        +contacts()
+        +faq()
+        +about-us()
+        +follow-us()
+      +copyright()
+
+
+  block page-bottom
+    script(src='js/bundle.js')

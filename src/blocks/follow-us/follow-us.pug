@@ -1,0 +1,30 @@
+//- Все примеси в этом файле должны начинаться c имени блока (follow-us)
+
+mixin follow-us(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +follow-us('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' follow-us--' + modsList[i].trim();
+      }
+    }
+
+  .page-footer__follow-us.follow-us(class=allMods)&attributes(attributes)
+    .follow-us__inner
+      h2.follow-us__title Рассылка
+      p.follow-us__text Подпишись на нашу информационную рассылку, Чтобы всегда быть в курсе актуальных новостей компании, Скидок и выгодных предложений!
+      form.follow-us__form(action="#" type="submit")
+        label(for="email")
+          input(type="email" name="email" placeholder="Введите адрес вашей электронной почты")
+        p.follow-us__info Оформляя подписку, вы соглашаетесь
+          a c нашими правилами
+        +btn('Подписаться')

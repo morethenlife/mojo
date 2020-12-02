@@ -1,0 +1,28 @@
+extends ../pug/layout.pug
+
+block meta
+  title Mojo
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+block nav
+  +navigation
+
+block content
+  main
+  .breadcrumbs
+    +breadcrumbs()
+      +breadcrumbs-item('Все товары')
+      +breadcrumbs-item('Пасты').breadcrumbs__item--active
+      +breadcrumbs-item('Шоколад кешью')
+      +breadcrumbs-item('Горький шоколад')
+
+  +goods()
+
+//- block footer
+//-   p footer
+
+//- //- block append page-bottom
+//- //-   script(src='js/some.js')

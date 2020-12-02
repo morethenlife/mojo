@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (copyright)
+
+mixin copyright(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +copyright('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' copyright--' + modsList[i].trim();
+      }
+    }
+
+  .copyright(class=allMods)&attributes(attributes)
+    p.copyright__text © 2020 MOJO. Все права защищены

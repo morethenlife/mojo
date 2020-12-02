@@ -1,0 +1,37 @@
+// В этом файле должны быть стили для БЭМ-блока store, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.store {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @include container();
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    @include reset-list;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &__adress,
+  &__tel {
+    display: block;
+  }
+}

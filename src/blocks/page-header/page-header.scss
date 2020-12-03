@@ -31,12 +31,9 @@
     line-height: 21px;
     font-weight: 400;
     color: $text-color;
+    text-decoration: none;
 
     padding: 25px 0;
-
-    &--active {
-      text-decoration: underline;
-    }
 
     &:hover,
     &:focus {

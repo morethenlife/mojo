@@ -8,11 +8,25 @@
 
   margin-bottom: 50px;
 
+
+  &__inner {
+    position: relative;
+  }
+
   &__logo-wrapper {
     @include container();
 
-    margin-top: 200px;
-    margin-bottom: -114px;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    top: 50%;
+    left: -145px;
+    transform: translateY(-50%);
+
+    @media (max-width: $screen-lg) {
+      left: -100px;
+    }
   }
 
   &__title {
@@ -28,6 +42,8 @@
   }
 
   &__item {
+    padding: 4.238% 0;
+
     &:nth-child(even) {
       background-color: $light-peach;
     }
@@ -36,15 +52,23 @@
   &__item-inner {
     @include container();
 
+    // padding: 0 10.157%;
     padding: 0 195px;
     display: flex;
     align-items: center;
+
+    @media (max-width: $screen-lg) {
+      padding: 0 145px;
+    }
   }
 
   &__img {
     display: block;
-    padding: 50px 0;
-    margin-left: 290px;
+    margin-left: 19.257%;
+
+    @media (min-width: $screen-md) {
+      margin-left: 5%;
+    }
   }
 
   &__text {
@@ -53,6 +77,13 @@
 
   &__link {
     display: block;
-    margin-top: 60px;
+
+    margin-top: 6.586%;
+  }
+
+  .logo {
+    img {
+      margin: 0;
+    }
   }
 }

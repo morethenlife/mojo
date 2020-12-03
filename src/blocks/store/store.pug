@@ -19,65 +19,67 @@ mixin store(text, mods)
     }
 
   .store(class=allMods)&attributes(attributes)
-    .store__logo-wrapper
-      +logo(false)
-        img(src='img/logo.svg', alt='Logo', width='81', height='21')
-    ul.store__list
-      li.store__item
-        h2.store__title Москва центр
-        p
-          span.store__adress Адрес: ул. Тверская, 8, стр. 1
-          span.store__tel Телефон: 8 (495) 629-64-83
-      li.store__item
-        h2.store__title Москва север
-        p
-          span.store__adress Адрес: ул. Лескова, 8
-          span.store__tel Телефон: 8 (495) 629-64-83
-      li.store__item
-        h2.store__title Москва Запад
-        p
-          span.store__adress Адрес: ул. Поклонная, 11, стр. 1
-          span.store__tel Телефон: 8 (495) 629-64-83
-    ul.store__list
-      li.store__item
-        h2.store__title Москва Афимолл
-        p
-          span.store__adress Адрес: ул. Тверская, 8, стр. 1
-          span.store__tel Телефон: 8 (495) 629-64-83
-      li.store__item
-        h2.store__title Москва ЦУМ
-        p
-          span.store__adress Адрес: ул. Лескова, 8
-          span.store__tel Телефон: 8 (495) 629-64-83
-      li.store__item
-        h2.store__title Москва запад
-        p
-          span.store__adress Адрес: ул. Поклонная, 11, стр. 1
-          span.store__tel Телефон: 8 (495) 629-64-83
-    ul.store__list
-      li.store__item
-        h2.store__title Москва Авиапарк
-        p
-          span.store__adress Адрес: ул. Тверская, 8, стр. 1
-          span.store__tel Телефон: 8 (495) 629-64-83
-      li.store__item
-        h2.store__title Москва Атриум
-        p
-          span.store__adress Адрес: ул. Лескова, 8
-          span.store__tel Телефон: 8 (495) 629-64-83
-      li.store__item
-        h2.store__title Москва Охотничий ряд
-        p
-          span.store__adress Адрес: ул. Поклонная, 11, стр. 1
-          span.store__tel Телефон: 8 (495) 629-64-83
-    ul.store__list
-      li.store__item
-        h2.store__title Москва Цветной
-        p
-          span.store__adress Адрес: ул. Тверская, 8, стр. 1
-          span.store__tel Телефон: 8 (495) 629-64-83
-      li.store__item
-        h2.store__title Москва север
-        p
-          span.store__adress Адрес: ул. Лескова, 8
-          span.store__tel Телефон: 8 (495) 629-64-83
+    .store__inner
+      ul.store__list
+        li.store__item
+          .store__item-inner
+            .store__logo-wrapper
+              +logo(false)
+                img(src='img/logo.svg', alt='Logo', width='81', height='21')
+            h2.store__title Москва центр
+          p
+            span.store__adress Адрес: ул. Тверская, 8, стр. 1
+            span.store__tel Телефон: 8 (495) 629-64-83
+        li.store__item
+          h2.store__title Москва север
+          p
+            span.store__adress Адрес: ул. Лескова, 8
+            span.store__tel Телефон: 8 (495) 629-64-83
+        li.store__item
+          h2.store__title Москва Запад
+          p
+            span.store__adress Адрес: ул. Поклонная, 11, стр. 1
+            span.store__tel Телефон: 8 (495) 629-64-83
+      ul.store__list
+        li.store__item
+          h2.store__title Москва Афимолл
+          p
+            span.store__adress Адрес: ул. Тверская, 8, стр. 1
+            span.store__tel Телефон: 8 (495) 629-64-83
+        li.store__item
+          h2.store__title Москва ЦУМ
+          p
+            span.store__adress Адрес: ул. Лескова, 8
+            span.store__tel Телефон: 8 (495) 629-64-83
+        li.store__item
+          h2.store__title Москва запад
+          p
+            span.store__adress Адрес: ул. Поклонная, 11, стр. 1
+            span.store__tel Телефон: 8 (495) 629-64-83
+      ul.store__list
+        li.store__item
+          h2.store__title Москва Авиапарк
+          p
+            span.store__adress Адрес: ул. Тверская, 8, стр. 1
+            span.store__tel Телефон: 8 (495) 629-64-83
+        li.store__item
+          h2.store__title Москва Атриум
+          p
+            span.store__adress Адрес: ул. Лескова, 8
+            span.store__tel Телефон: 8 (495) 629-64-83
+        li.store__item
+          h2.store__title Москва Охотничий ряд
+          p
+            span.store__adress Адрес: ул. Поклонная, 11, стр. 1
+            span.store__tel Телефон: 8 (495) 629-64-83
+      ul.store__list
+        li.store__item
+          h2.store__title Москва Цветной
+          p
+            span.store__adress Адрес: ул. Тверская, 8, стр. 1
+            span.store__tel Телефон: 8 (495) 629-64-83
+        li.store__item
+          h2.store__title Москва север
+          p
+            span.store__adress Адрес: ул. Лескова, 8
+            span.store__tel Телефон: 8 (495) 629-64-83

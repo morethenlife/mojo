@@ -22,10 +22,6 @@
   &__link {
     color: rgba($color: #000000, $alpha: 0.5);
 
-    &--active {
-      text-decoration: underline;
-    }
-
     &:hover,
     &:focus {
       cursor: pointer;

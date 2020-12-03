@@ -40,10 +40,4 @@
   background-color: $block-bg-color;
 
   margin-bottom: 20px;
-
-  &__item {
-    &--active {
-      text-decoration: underline;
-    }
-  }
 }

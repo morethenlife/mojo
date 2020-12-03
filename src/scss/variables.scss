@@ -11,10 +11,14 @@ $gray-lighten:                hsl(0, 0%, 70%);
 $gray-lighter:                hsl(0, 0%, 80%);
 $gray-lightest:               hsl(0, 0%, 90%);
 
+
 $white:                       #FFFAF2;
 $light-grey:                  rgba(0, 0, 0, 0.05);
 $lighten-grey:                rgba(242, 237, 230, 1);
 $light-peach:                 rgba(251, 243, 234, 1);
+$semiblack:                   rgba(0, 0, 0, 0.5);
+$darkblack:                   rgba(0, 0, 0, 1);
+$light-orange:                rgba(233, 189, 173, 1);
 
 $color-main:                  hsl(208, 98%, 43%);
 $color-success:               hsl(120, 39%, 54%);
@@ -35,11 +39,13 @@ $text-color-muted:            $gray;
 $body-bg:                     $white;
 
 $link-color:                  $color-main;
-$link-color--hover:           darken($color-main, 15%);
+$link-color--hover:           $semiblack;
+$footer-link-color-hover:     $darkblack;
 
 $border-color:                $gray-lighten;
 $block-bg-color:              $light-grey;
 $block-hover-color:           $lighten-grey;
+$button-hover-bg:             $light-orange;
 
 
 

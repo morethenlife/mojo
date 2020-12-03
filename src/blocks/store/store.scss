@@ -7,13 +7,62 @@
   $block-name:                &; // #{$block-name}__element
 
   @include container();
-  display: flex;
-  margin-top: 200px;
+
+  margin-top: 10.43%;
+  margin-bottom: 24%;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // padding: 0 10.834%;
+    padding: 0 195px;
+
+    @media (max-width: $screen-xxl) and (min-width: $screen-xl) {
+      padding: 0 125px;
+    }
+
+    @media (max-width: $screen-xl) and (min-width: $screen-lg) {
+      padding: 0 145px;
+    }
+
+    @media (max-width: $screen-lg) and (min-width: $screen-md) {
+      padding: 0 125px;
+    }
+  }
 
   &__list {
     @include reset-list;
-    margin-right: 100px;
-    margin-bottom: 340px;
+    // margin-right: 5.556%;
+    margin: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    margin-bottom: 45px;
+  }
+
+  &__item-inner {
+    position: relative;
+  }
+
+  &__logo-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -190px;
+
+    @media (max-width: $screen-xxl) and (min-width: $screen-xl) {
+      left: -135px;
+    }
+
+    @media (max-width: $screen-xl) and (min-width: $screen-lg) {
+      left: -160px;
+    }
+
+    @media (max-width: $screen-lg) and (min-width: $screen-md) {
+      left: -140px;
+    }
   }
 
   &__title {
@@ -34,11 +83,9 @@
   }
 
   &__logo-wrapper {
-    margin-right: 100px;
-
     .logo{
       img {
-        margin-top: 0;
+        margin: 0;
       }
     }
   }

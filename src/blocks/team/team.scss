@@ -7,8 +7,23 @@
   $block-name:                &; // #{$block-name}__element
   margin-bottom: 50px;
 
-  .press__logo-wrapper {
-    margin-top: 135px;
-    margin-bottom: -136px;
+  .press__inner {
+    position: relative;
+
+  }
+
+  // .press__logo-wrapper {
+  //   margin: 0;
+  //   padding: 0;
+  //   top: 50%;
+  //   left: -105px;
+  //   transform: translateY(-50%);
+  //   position: absolute;
+  // }
+
+  .logo {
+    img {
+      margin: 0;
+    }
   }
 }

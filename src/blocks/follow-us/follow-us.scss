@@ -17,13 +17,18 @@
 
   &__form {
     input {
-      width: 466px;
-      padding: 22px 90px;
+      width: 100%;
+      padding: 22px;
       margin-bottom: 30px;
+      text-align: center;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.3);
 
       &:hover,
       &:focus {
         cursor: pointer;
+        transition: $transition-time;
+        border: 1px solid rgba(0, 0, 0, 0.5);
       }
     }
   }
@@ -44,6 +49,14 @@
       &:focus {
         cursor: pointer;
       }
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    &--margin {
+      margin-bottom: 25px;
     }
   }
 }

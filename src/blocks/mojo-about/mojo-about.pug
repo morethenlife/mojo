@@ -19,13 +19,14 @@ mixin mojo-about(text, mods)
     }
 
   .mojo-about(class=allMods)&attributes(attributes)
-    .mojo-about__logo-wrapper
-      +logo(false)
-        img(src='img/logo.svg', alt='Logo', width='81', height='21')
     ul.mojo-about__list
       li.mojo-about__item
         .mojo-about__inner
-          h2.mojo-about__main-title Как родилась идея?
+          .mojo-about__block
+            .mojo-about__logo-wrapper
+              +logo(false)
+                img(src='img/logo.svg', alt='Logo', width='81', height='21')
+            h2.mojo-about__main-title Как родилась идея?
           p.mojo-about__text «Этой весной я готовила много разной выпечки и делилась рецептами с подписчиками, — рассказывает Саша Новикова, основатель проекта о здоровом образе жизни How to Green и сервиса доставки здорового питания How to Eat. — Женя Цырлин, основательница бренда Mojo Cacao, приготовила банановый хлеб по моему рецепту и после этого предложила мне поучаствовать в создании шоколада с таким вкусом.
           p.mojo-about__text Я сразу согласилась, потому что мне очень нравится продукция Mojo Cacao».
         img.mojo-about__img(src="img/mojo-cacao@1x.jpg" width="642" height="520")

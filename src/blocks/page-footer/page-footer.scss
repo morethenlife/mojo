@@ -17,14 +17,19 @@
     justify-content: space-between;
     align-items: baseline;
   }
+
+  a:hover,
+  a:focus {
+    color: $footer-link-color-hover;
+  }
 }
 
 .page-footer__contacts {
-  width: 16%;
+  width: 15%;
 }
 
 .page-footer__faq {
-  width: 15%;
+  width: 18%;
 }
 .page-footer__about-us {
   width: 10%;

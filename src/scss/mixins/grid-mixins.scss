@@ -1,9 +1,9 @@
 $screen-xs:                   0 !default;
-$screen-sm:                   480px !default;
-$screen-md:                   768px !default;
-$screen-lg:                   992px !default;
-$screen-xl:                   1200px !default;
-$screen-xxl:                  1800px !default;
+$screen-sm:                   768px !default;
+$screen-md:                   992px !default;
+$screen-lg:                   1200px !default;
+$screen-xl:                   1600px !default;
+$screen-xxl:                  1920px !default;
 
 $container-sm:                100% !default;
 $container-md:                100% !default;
@@ -13,7 +13,6 @@ $container-xxl:               ($screen-xxl - 30) !default;
 
 $grid-columns:                12 !default;
 $grid-gutter-width:           30px !default;
-
 
 
 //------------------------------------------------------------------------------

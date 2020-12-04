@@ -7,3 +7,10 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@mixin h2-style {
+  font-size: 28px;
+  line-height: 28px;
+  margin: 0;
+  margin-bottom: 25px;
+}

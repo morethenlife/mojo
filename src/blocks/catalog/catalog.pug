@@ -1,0 +1,143 @@
+//- Все примеси в этом файле должны начинаться c имени блока (catalog)
+
+mixin catalog(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +catalog('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' catalog--' + modsList[i].trim();
+      }
+    }
+
+  .catalog(class=allMods)&attributes(attributes)
+    .catalog__inner
+      .logo__wrapper
+        +logo(false)
+          img(src='img/logo.svg', alt='Logo', width='81', height='21')
+
+      .breadcrumbs
+        +breadcrumbs()
+          +breadcrumbs-item('Все товары')
+          +breadcrumbs-item('Пасты')
+          +breadcrumbs-item('Шоколад кешью')
+          +breadcrumbs-item('Горький шоколад')
+
+      .catalog__content
+        ul.catalog__list
+          li.catalog__item
+            .catalog__text-wrappper
+              h2.catalog__main-title Шоколадно-ореховые пасты
+              .catalog__text
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                p tempor incididunt ut labore et dolore
+                p magna aliqua.
+              .catalog__link-wrapper
+                a(href="catalog-paste.html").catalog__link.btn Все пасты
+                  img(src="img/link-arrow-right.svg" width="9" height=" 7")
+            ul.goods__list
+              li.goods__item
+                span.goods__select
+                img(src="img/paste-popcorn@1x.png" alt="Попкорн-паста")
+                .goods__inner
+                  h3.goods__title Паста со вкусом ореха кешью
+                  .goods__wrapper
+                    span.goods__weight 200 гр
+                    span.goods__price 400 ₽
+              li.goods__item
+                span.goods__select
+                img(src="img/paste-creamy@1x.png" alt="Крем-паста")
+                .goods__inner
+                  h3.goods__title Паста со вкусом ореха кешью
+                  .goods__wrapper
+                    span.goods__weight 200 гр
+                    span.goods__price 400 ₽
+              li.goods__item
+                span.goods__select
+                img(src="img/paste-cookie@1x.png" alt="Бисквит-паста")
+                .goods__inner
+                  h3.goods__title Паста со вкусом ореха кешью
+                  .goods__wrapper
+                    span.goods__weight 200 гр
+                    span.goods__price 400 ₽
+
+          li.catalog__item
+            .catalog__text-wrappper
+              h2.catalog__main-title Шоколад кешью
+              .catalog__text
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                p tempor incididunt ut labore et dolore
+                p magna aliqua.
+              .catalog__link-wrapper
+                a(href="catalog-paste.html").catalog__link.btn Весь шоколад
+                  img(src="img/link-arrow-right.svg" width="9" height=" 7")
+            ul.goods__list
+              li.goods__item.goods__item--padding
+                span.goods__select
+                img(src="img/pumpkin-pie@1x.png" alt="Попкорн-паста")
+                .goods__inner
+                  h3.goods__title.goods__title--width Шоколад с обжаренным черным кунжутом
+                  .goods__wrapper
+                    span.goods__weight 80 гр
+                    span.goods__price 400 ₽
+              li.goods__item.goods__item--padding
+                span.goods__select
+                img(src="img/vietnam@1x.png" alt="Крем-паста")
+                .goods__inner
+                  h3.goods__title.goods__title--width Шоколад с обжаренным черным кунжутом
+                  .goods__wrapper
+                    span.goods__weight 80 гр
+                    span.goods__price 400 ₽
+              li.goods__item.goods__item--padding
+                span.goods__select
+                img(src="img/habanero-salt-choco@1x.png" alt="Бисквит-паста")
+                .goods__inner
+                  h3.goods__title.goods__title--width Шоколад с обжаренным черным кунжутом
+                  .goods__wrapper
+                    span.goods__weight 80 гр
+                    span.goods__price 400 ₽
+
+          li.catalog__item
+            .catalog__text-wrappper
+              h2.catalog__main-title Горький шоколад
+              .catalog__text
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                p tempor incididunt ut labore et dolore
+                p magna aliqua.
+              .catalog__link-wrapper
+                a(href="catalog-paste.html").catalog__link.btn Весь горький шоколад
+                  img(src="img/link-arrow-right.svg" width="9" height=" 7")
+            ul.goods__list
+              li.goods__item.goods__item--padding
+                span.goods__select
+                img(src="img/black-sezam@1x.png" alt="Попкорн-паста")
+                .goods__inner
+                  h3.goods__title.goods__title--width Шоколад с обжаренным черным кунжутом
+                  .goods__wrapper
+                    span.goods__weight 80 гр
+                    span.goods__price 400 ₽
+              li.goods__item.goods__item--padding
+                span.goods__select
+                img(src="img/cookie@1x.png" alt="Крем-паста")
+                .goods__inner
+                  h3.goods__title.goods__title--width Шоколад с обжаренным черным кунжутом
+                  .goods__wrapper
+                    span.goods__weight 80 гр
+                    span.goods__price 400 ₽
+              li.goods__item.goods__item--padding
+                span.goods__select
+                img(src="img/habanero-salt-cacao@1x.png" alt="Бисквит-паста")
+                .goods__inner
+                  h3.goods__title.goods__title--width Шоколад с обжаренным черным кунжутом
+                  .goods__wrapper
+                    span.goods__weight 80 гр
+                    span.goods__price 400 ₽
+

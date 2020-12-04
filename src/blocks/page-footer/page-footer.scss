@@ -9,7 +9,8 @@
 
   &__inner {
     padding: 0 60px;
-    border-top: 1px solid #b3b3b3;
+    border-top: 1px solid $border-color;
+    margin-bottom: 5.5%;
   }
 
   &__wrapper {

@@ -5,6 +5,10 @@
 .page-header {
   @include container();
 
+  &__title {
+    @include hide-text;
+  }
+
   &__nav-list {
     @include reset-list;
 

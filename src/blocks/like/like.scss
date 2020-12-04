@@ -1,0 +1,31 @@
+// В этом файле должны быть стили для БЭМ-блока like, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.like {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include container();
+    padding: 0 7.5%;
+  }
+
+  .catalog__item {
+    display: block;
+  }
+
+  .goods__title--width {
+    max-width: 220px;
+  }
+
+  &__main-title {
+    @include h2-style;
+    margin-bottom: 6%;
+    text-align: center;
+  }
+
+  .goods__inner {
+    // margin-top: -140px;
+  }
+}

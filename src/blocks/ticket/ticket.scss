@@ -1,0 +1,152 @@
+// В этом файле должны быть стили для БЭМ-блока ticket, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.ticket {
+
+  $block-name:                &; // #{$block-name}__element
+  @include container();
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 7.5%;
+    margin-bottom: 14%;
+  }
+
+  &__info-list,
+  &__list,
+  &__title-list {
+    @include reset-list;
+  }
+
+  &__info-list {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    width: 49%;
+  }
+
+  &__list {
+    margin-bottom: 7.5%;
+  }
+
+  &__wrapper {
+    width: 50%;
+  }
+
+  &__main-title {
+    @include h2-style;
+
+    margin-bottom: 0;
+  }
+
+  &__title-wrapper {
+    margin-bottom: 48px;
+  }
+
+  &__title-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title-item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+
+  &__img-wrapper {
+    width: 50%;
+  }
+
+  &__bg-wrapper {
+    background-color: $light-grey;
+    padding: 8.5px 15px;
+    display: flex;
+
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  &__line {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      opacity: 0.5;
+      transition: $transition-time;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 1px;
+      background-color: rgb(112, 112, 112);
+      top: 15px;
+      left: 8px;
+    }
+
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__info-item {
+    display: flex;
+    position: relative;
+  }
+
+  &__dots {
+    flex-grow: 1;
+
+    &::after {
+      position: absolute;
+      left: 2px;
+      bottom: 0;
+      content: ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . ";
+      width: calc(100% - 6px);
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  &__gallery-list {
+    @include reset-list;
+
+    display: flex;
+  }
+
+  &__gallery-item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}

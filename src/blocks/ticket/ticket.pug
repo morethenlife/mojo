@@ -1,0 +1,204 @@
+//- Все примеси в этом файле должны начинаться c имени блока (ticket)
+
+mixin ticket(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +ticket('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' ticket--' + modsList[i].trim();
+      }
+    }
+
+  .ticket(class=allMods)&attributes(attributes)
+    .ticket__inner
+      .ticket__img-wrapper
+        img(src="img/ticket-vietnam@1x.png" width="670" heigh="839" alt="Шоколад")
+      .ticket__wrapper
+        .ticket__title-wrapper
+          h2.ticket__main-title Black Quinoa Majo Cacao
+          ul.ticket__title-list
+            li.ticket__title-item 20 гр
+            li.ticket__title-item 60 гр
+        .ticket__info-wrapper
+          ul.ticket__list
+
+            li.ticket__item
+              .ticket__bg-wrapper
+                h3.ticket__title Описание
+                span.ticket__line
+              ul.ticket__info-list
+                li.ticket__info-item
+                  .ticket__text Вид шоколада
+                  .ticket__dots
+                  .ticket__info-text Горький
+
+                li.ticket__info-item
+                  .ticket__text Содержание какао
+                  .ticket__dots
+                  .ticket__info-text 70%
+
+                li.ticket__info-item
+                  .ticket__text Вес товара
+                  .ticket__dots
+                  .ticket__info-text 840 г
+
+                li.ticket__info-item
+                  .ticket__text Энергетическая ценность, ккал/100 г
+                  .ticket__dots
+                  .ticket__info-text 518
+
+                li.ticket__info-item
+                  .ticket__text Белки, г/100 г
+                  .ticket__dots
+                  .ticket__info-text 9
+
+                li.ticket__info-item
+                  .ticket__text Жиры, г/100 г
+                  .ticket__dots
+                  .ticket__info-text 35
+
+                li.ticket__info-item
+                  .ticket__text Углеводы, г/100 г
+                  .ticket__dots
+                  .ticket__info-text 42
+
+
+            li.ticket__item
+              .ticket__bg-wrapper
+                h3.ticket__title Состав
+                span.ticket__line
+              ul.ticket__info-list.ticket__info-list--active
+                li.ticket__info-item
+                  .ticket__text Вид шоколада
+                  .ticket__dots
+                  .ticket__info-text Горький
+
+                li.ticket__info-item
+                  .ticket__text Содержание какао
+                  .ticket__dots
+                  .ticket__info-text 70%
+
+                li.ticket__info-item
+                  .ticket__text Вес товара
+                  .ticket__dots
+                  .ticket__info-text 840 г
+
+                li.ticket__info-item
+                  .ticket__text Энергетическая ценность, ккал/100 г
+                  .ticket__dots
+                  .ticket__info-text 518
+
+                li.ticket__info-item
+                  .ticket__text Белки, г/100 г
+                  .ticket__dots
+                  .ticket__info-text 9
+
+                li.ticket__info-item
+                  .ticket__text Жиры, г/100 г
+                  .ticket__dots
+                  .ticket__info-text 35
+
+                li.ticket__info-item
+                  .ticket__text Углеводы, г/100 г
+                  .ticket__dots
+                  .ticket__info-text 42
+
+
+            li.ticket__item
+              .ticket__bg-wrapper
+                h3.ticket__title Условия доставки
+                span.ticket__line
+              ul.ticket__info-list
+                li.ticket__info-item
+                  .ticket__text Вид шоколада
+                  .ticket__dots
+                  .ticket__info-text Горький
+
+                li.ticket__info-item
+                  .ticket__text Содержание какао
+                  .ticket__dots
+                  .ticket__info-text 70%
+
+                li.ticket__info-item
+                  .ticket__text Вес товара
+                  .ticket__dots
+                  .ticket__info-text 840 г
+
+                li.ticket__info-item
+                  .ticket__text Энергетическая ценность, ккал/100 г
+                  .ticket__dots
+                  .ticket__info-text 518
+
+                li.ticket__info-item
+                  .ticket__text Белки, г/100 г
+                  .ticket__dots
+                  .ticket__info-text 9
+
+                li.ticket__info-item
+                  .ticket__text Жиры, г/100 г
+                  .ticket__dots
+                  .ticket__info-text 35
+
+                li.ticket__info-item
+                  .ticket__text Углеводы, г/100 г
+                  .ticket__dots
+                  .ticket__info-text 42
+
+
+            li.ticket__item
+              .ticket__bg-wrapper
+                h3.ticket__title Правила хранения
+                span.ticket__line
+              ul.ticket__info-list
+                li.ticket__info-item
+                  .ticket__text Вид шоколада
+                  .ticket__dots
+                  .ticket__info-text Горький
+
+                li.ticket__info-item
+                  .ticket__text Содержание какао
+                  .ticket__dots
+                  .ticket__info-text 70%
+
+                li.ticket__info-item
+                  .ticket__text Вес товара
+                  .ticket__dots
+                  .ticket__info-text 840 г
+
+                li.ticket__info-item
+                  .ticket__text Энергетическая ценность, ккал/100 г
+                  .ticket__dots
+                  .ticket__info-text 518
+
+                li.ticket__info-item
+                  .ticket__text Белки, г/100 г
+                  .ticket__dots
+                  .ticket__info-text 9
+
+                li.ticket__info-item
+                  .ticket__text Жиры, г/100 г
+                  .ticket__dots
+                  .ticket__info-text 35
+
+                li.ticket__info-item
+                  .ticket__text Углеводы, г/100 г
+                  .ticket__dots
+                  .ticket__info-text 42
+          .ticket__btn-wrapper
+            button.ticket__btn.btn Отправить в подарок
+            button.ticket__btn.btn Добавить в корзину
+      .ticket__gallery-wrapper
+        ul.ticket__gallery-list
+          li.ticket__gallery-item
+            img(src="img/ticket-vietnam-mini@1x.png", alt="Шоколад" width="113" heigh="112")
+          li.ticket__gallery-item
+            img(src="img/ticket-choco-mini@1x.png", alt="Шоколад" width="113" heigh="112")

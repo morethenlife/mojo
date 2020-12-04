@@ -1,0 +1,75 @@
+//- Все примеси в этом файле должны начинаться c имени блока (like)
+
+mixin like(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +like('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' like--' + modsList[i].trim();
+      }
+    }
+
+  .like(class=allMods)&attributes(attributes)
+    .like__inner
+      //- h2.like__maim-title Также вам может понравиться
+      //- ul.like__list
+      //-   li.__like__item
+      //-    a.like__link
+      //-     img(src="img/black-sezam@1x.png", alt="Шоколад" width="346" height="430")
+
+      //-   li.__like__item
+      //-    a.like__link
+      //-     img(src="img/cookie@1x.png", alt="Шоколад" width="346" height="430")
+
+      //-   li.__like__item
+      //-    a.like__link
+      //-     img(src="img/habanero-salt-cacao@1x.png", alt="Шоколад" width="346" height="430")
+
+      //-   li.__like__item
+      //-    a.like__link
+      //-     img(src="img/latte@1x.png", alt="Шоколад" width="346" height="430")
+
+      li.catalog__item
+        h2.like__main-title Также вам может понравиться
+        ul.goods__list
+          li.goods__item.goods__item--padding
+            span.goods__select
+            img(src="img/black-sezam@1x.png" alt="Попкорн-паста")
+            .goods__inner
+              h3.goods__title.goods__title--width Шоколад с обжаренным черным кунжутом
+              .goods__wrapper
+                span.goods__weight 80 гр
+                span.goods__price 400 ₽
+          li.goods__item.goods__item--padding
+            span.goods__select
+            img(src="img/cookie@1x.png" alt="Крем-паста")
+            .goods__inner
+              h3.goods__title.goods__title--width Шоколад с обжаренным черным кунжутом
+              .goods__wrapper
+                span.goods__weight 80 гр
+                span.goods__price 400 ₽
+          li.goods__item.goods__item--padding
+            span.goods__select
+            img(src="img/habanero-salt-cacao@1x.png" alt="Бисквит-паста")
+            .goods__inner
+              h3.goods__title.goods__title--width Шоколад с обжаренным черным кунжутом
+              .goods__wrapper
+                span.goods__weight 80 гр
+                span.goods__price 400 ₽
+          li.goods__item.goods__item--padding
+            span.goods__select
+            img(src="img/latte@1x.png" alt="Бисквит-паста")
+            .goods__inner
+              h3.goods__title.goods__title--width Шоколад с обжаренным черным кунжутом
+              .goods__wrapper
+                span.goods__weight 80 гр
+                span.goods__price 400 ₽

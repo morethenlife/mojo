@@ -37,10 +37,14 @@ html(class='page  no-js', lang='ru')
     noscript У вас отключен JavaScript. Это пугает.
 
     +page-header()
-      .page-header__wrapper
-        h1.page-header__title  Шоколад, шоколадно-ореховые пасты ручной работы от MOJO
-        block nav
-        +cart()
+      //- .page-header__wrapper
+      //-   h1.page-header__title  Шоколад, шоколадно-ореховые пасты ручной работы от MOJO
+      //-   .pade-header__menu-wrapper
+      //-     +navigation
+      //-     +cart()
+      //-   .logo__wrapper
+      //-     +logo(false)
+      //-       img(src='img/logo.svg', alt='Logo', width='81', height='21')
 
       //- +logo(false)
       //-   img(src='img/logo.svg', alt='Logo', width='81', height='21')
@@ -50,6 +54,7 @@ html(class='page  no-js', lang='ru')
 
     +page-footer()
       .page-footer__wrapper
+        //- .page-footer__mock
         +contacts()
         +faq()
         +about-us()

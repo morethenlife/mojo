@@ -7,12 +7,16 @@ block meta
 //- block append head
 //-   link(rel='stylesheet', href='css/some.css')
 
-block nav
-  +navigation
+//- block nav
+//-   +navigation
 
 block content
   main
+    .logo__wrapper.catalog__logo
+      +logo(false)
+        img(src='img/logo.svg' alt='Logo' width='81' height='21')
     +catalog
+
 
 //- block footer
 //-   p footer

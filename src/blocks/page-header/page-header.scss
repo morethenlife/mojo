@@ -5,6 +5,10 @@
 .page-header {
   @include container();
 
+  @media (max-width: $screen-sm) {
+    padding: 0 22px;
+  }
+
   &__title {
     @include hide-text;
   }
@@ -18,10 +22,37 @@
 
   &__wrapper {
     display: flex;
+
+    @media (max-width: $screen-sm) {
+      border-bottom: 1px solid $border-color
+    }
+  }
+
+  &__menu-inner {
+    @media (max-width: $screen-sm) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__menu-wrapper {
+    width: 100%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 
     border-bottom: 1px solid $border-color;
+
+    @media (max-width: $screen-sm) {
+      border-bottom: none;
+      justify-content: flex-end;
+    }
+  }
+
+  &__nav {
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
   }
 
   &__nav-item {
@@ -51,6 +82,8 @@
 
   &__btn {
     @include reset-button;
+    margin-right: 5px;
+    padding-top: 1px;
 
     color: #ffffff;
 
@@ -67,6 +100,25 @@
       background-color: #000000;
       border-radius: 50%;
       z-index: -1;
+    }
+  }
+
+  .logo__wrapper {
+    padding: 0;
+    display: none;
+
+    @media (max-width: $screen-sm) {
+      display: block;
+      order: -1;
+    }
+  }
+
+  .burger {
+    display: none;
+
+    @media (max-width: $screen-sm) {
+      display: block;
+      margin-left: 15px;
     }
   }
 }

@@ -84,7 +84,7 @@ body {
   line-height: $line-height;
   text-align: left;
   color: $text-color;
-  background-color: $body-bg;
+  background-color: #ffffff;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -97,6 +97,12 @@ body {
 // Коррекция для кликабельных элементов с указанной ролью в iOS
 [role='button'] {
   cursor: pointer;
+}
+
+.logo__wrapper {
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
 }
 
 // Мы любим Сафари (на самом деле, нет).
@@ -180,10 +186,6 @@ a {
     color: $link-color--hover;
     transition: $transition-time;
   }
-
-  // &:visited {
-  //   color: $link-color--hover;
-  // }
 
   &[href^='tel:'] {
 

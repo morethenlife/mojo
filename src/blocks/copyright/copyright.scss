@@ -9,5 +9,9 @@
   &__text {
     margin: 0;
     margin-top: -21px;
+
+    @media (max-width: $screen-sm) {
+      margin-top: 60px;
+     }
   }
 }

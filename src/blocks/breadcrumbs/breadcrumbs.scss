@@ -9,6 +9,10 @@
   color: $text-color;
   display: flex;
 
+  @media (max-width: $screen-sm) {
+    padding: 0 22px;
+    flex-wrap: wrap;
+  }
 
   a {
     color: $text-color;
@@ -20,11 +24,14 @@
       text-decoration: none;
     }
   }
+
+  @media (max-width: $screen-sm) {
+    font-size: 12px;
+  }
 }
 
 .breadcrumbs__item {
   display: inline-block;
-  margin-right: 1.8em;
   white-space: nowrap;
   padding: 30px 0;
 
@@ -33,6 +40,29 @@
     display: inline-block;
     margin-left: 1.8em;
     color: $gray;
+
+    @media (max-width: $screen-sm) {
+      margin-left: 0.8em;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 1.8em;
+
+    @media (max-width: $screen-sm) {
+      margin-right: 0.8em;
+    }
+  }
+
+  // &:not(:last-child) {
+  //   @media (max-width: $screen-sm) {
+  //     margin-right: 0.8em;
+  //   }
+  // }
+
+  @media (max-width: $screen-sm) {
+    padding: 0;
+    // margin-right: 0.8em;
   }
 }
 
@@ -40,4 +70,9 @@
   background-color: $block-bg-color;
 
   margin-bottom: 20px;
+
+  @media (max-width: $screen-sm) {
+    background-color: transparent;
+    margin-top: 20px;
+  }
 }

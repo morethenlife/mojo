@@ -6,17 +6,27 @@
   @include container();
 
   margin-bottom: 50px;
+  padding: 0 22px;
 
   &__inner {
     padding: 0 60px;
     border-top: 1px solid $border-color;
     margin-bottom: 5.5%;
+
+    @media (max-width: $screen-sm) {
+      padding: 0;
+      border-top: 1px solid rgba(112, 112, 112, 0.5)
+     }
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+
+    @media (max-width: $screen-sm) {
+     flex-wrap: wrap;
+    }
   }
 
   a:hover,
@@ -27,15 +37,32 @@
 
 .page-footer__contacts {
   width: 15%;
+
+  @media (max-width: $screen-sm) {
+    width: 50%;
+   }
 }
 
 .page-footer__faq {
   width: 18%;
+
+  @media (max-width: $screen-sm) {
+    width: 50%;
+   }
 }
+
 .page-footer__about-us {
   width: 10%;
+
+  @media (max-width: $screen-sm) {
+    width: 100%;
+   }
 }
 
 .page-footer__follow-us {
   width: 30%;
+
+  @media (max-width: $screen-sm) {
+    width: 100%;
+   }
 }

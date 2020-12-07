@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока icon, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--arrow {
+    width: 30px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.983' height='13.842' viewBox='0 0 29.983 13.842'%3E%3Cg id='Сгруппировать_133' data-name='Сгруппировать 133' transform='translate(-223.603 -1433.791)'%3E%3Cpath id='Контур_22' data-name='Контур 22' d='M0,0,6.4,6.573,0,13.145' transform='translate(246.492 1434.139)' fill='none' stroke='%23000' stroke-width='1'/%3E%3Cline id='Линия_15' data-name='Линия 15' x1='28.599' transform='translate(223.603 1440.746)' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+}

@@ -10,12 +10,15 @@ let config = {
   'alwaysAddBlocks': [
     // 'sprite-svg',
     // 'sprite-png',
-    // 'object-fit-polyfill',
+    'object-fit-polyfill',
   ],
   'addStyleBefore': [
     'src/scss/variables.scss',
     'src/scss/mixins.scss',
-    // 'somePackage/dist/somePackage.css', // для 'node_modules/somePackage/dist/somePackage.css',
+    'slick-slider/slick/slick.scss', // для 'node_modules/somePackage/dist/somePackage.css',
+    'slick-slider/slick/slick-theme.scss',
+    'slick-slider/slick/slick-theme.scss',
+    'animate.css/animate.css',
   ],
   'addStyleAfter': [
     // 'src/scss/print.scss',

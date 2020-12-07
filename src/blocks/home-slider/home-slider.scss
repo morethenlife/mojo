@@ -1,0 +1,97 @@
+// В этом файле должны быть стили для БЭМ-блока home-slider, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.home-slider {
+  position: relative;
+  margin-top: -72px;
+  width: 100%;
+
+  $block-name:                &; // #{$block-name}__element
+
+  #{$block-name}__inner {
+    @include container;
+    height: 100%;
+  }
+
+  #{$block-name}__box {
+    position: relative;
+    width: 100%;
+    height: 893px;
+    margin-bottom: 0;
+
+    .slick-list,
+    .slick-track {
+      height: 100%;
+    }
+
+    .slick-slide div:first-child {
+      height: 100%;
+    }
+
+    .slick-dots {
+      bottom: 84px;
+
+      li {
+        width: 75px;
+        height: 1.5px;
+        margin: 0;
+
+        button {
+          width: 75px;
+          height: 1.5px;
+          padding: 0;
+          background-color: $gray;
+
+          &:before {
+            display: none;
+          }
+        }
+
+        &.slick-active {
+
+          button {
+            background-color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  #{$block-name}__item {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  #{$block-name}__content {
+    display: flex;
+    padding-top: 220px;
+
+    .logo {
+      margin-right: 50px;
+
+      img {
+        margin: 6px 0 0 0;
+      }
+    }
+
+    h2 {
+      font-weight: 400;
+    }
+  }
+  #{$block-name}__outer {
+    width: 431px;
+
+    .catalog__text {
+      width: 341px;
+    }
+  }
+  #{$block-name}__info {}
+
+  #{$block-name}__link {
+    display: inline-block;
+  }
+}

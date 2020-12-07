@@ -1,0 +1,46 @@
+//- Все примеси в этом файле должны начинаться c имени блока (home-slider)
+
+mixin home-slider(tpl, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +home-slider('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' home-slider--' + modsList[i].trim();
+      }
+    }
+
+  if tpl === 'home'
+    .home-slider(class=allMods)&attributes(attributes)
+      .js-home-slider.home-slider__box
+        .home-slider__item(style="background-image: url('img/slider-1.jpg')")
+          .home-slider__inner
+            .home-slider__content
+              +logo('/')
+                img(src='img/logo.svg', alt='Logo', width='81', height='21')
+              .home-slider__info.catalog
+                .home-slider__outer
+                  h2.js-slider-title.catalog__main-title.animate__animated(data-animation-in="animate__fadeInUp") Представляем новую ограниченную коллекцию
+                  .catalog__text.js-slider-text.animate__animated(data-animation-in="animate__fadeInUp") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  a(href="#").js-slider-link.home-slider__link.animate__animated(data-animation-in="animate__fadeInUp")
+                    i.icon.icon--arrow
+
+        .home-slider__item(style="background-image: url('img/slider-1.jpg')")
+          .home-slider__inner
+            .home-slider__content
+              +logo('/')
+                img(src='img/logo.svg', alt='Logo', width='81', height='21')
+              .home-slider__info.catalog
+                .home-slider__outer
+                  h2.catalog__main-title.animate__animated(data-animation-in="animate__fadeInUp") Представляем новую ограниченную коллекцию #2
+                  .catalog__text.animate__animated(data-animation-in="animate__fadeInUp") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  a(href="#").home-slider__link.animate__animated(data-animation-in="animate__fadeInUp")
+                    i.icon.icon--arrow

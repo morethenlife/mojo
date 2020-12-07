@@ -74,6 +74,7 @@
 }
 
 body {
+  position: relative;
   display: flex;           // Исправляем баг в IE для min-height and flexbox (flex-direction:column)
   flex-direction: column;  // и прижимаем footer в IE 10-11
   margin: 0;
@@ -102,6 +103,10 @@ body {
 // Мы любим Сафари (на самом деле, нет).
 [type='search']::-webkit-search-decoration {
   -webkit-appearance: none; // stylelint-disable-line
+}
+
+.home {
+  padding-top: 72px;
 }
 
 // area,

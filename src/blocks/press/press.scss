@@ -8,9 +8,14 @@
 
   margin-bottom: 50px;
 
-
   &__inner {
     position: relative;
+  }
+
+  &__wrapper {
+    @media (max-width: $screen-sm) {
+      padding: 0 22px;
+    }
   }
 
   &__logo-wrapper {
@@ -21,44 +26,80 @@
 
     position: absolute;
     top: 50%;
-    left: -145px;
+    left: -195px;
     transform: translateY(-50%);
 
     @media (max-width: $screen-lg) {
       left: -100px;
     }
+
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+
+    @media (max-width: $screen-xl) {
+      top: -50px;
+      left: 0;
+    }
   }
 
   &__title {
-    font-size: 28px;
-    line-height: 28px;
+    @include h2-style;
+
     font-weight: 400;
     margin: 0;
     margin-bottom: 25px;
+
+    @media (max-width: $screen-sm) {
+      margin-left: 0;
+      order: -1;
+      font-size: 22px;
+    }
   }
 
   &__list {
     @include reset-list;
+
+    @media (max-width: $screen-sm) {
+      margin-top: 20px;
+    }
   }
 
   &__item {
     padding: 4.238% 0;
 
     &:nth-child(even) {
-      background-color: $light-peach;
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+
+    @media (max-width: $screen-sm) {
+      padding: 0;
+      padding-bottom: 33px;
     }
   }
 
   &__item-inner {
     @include container();
 
-    // padding: 0 10.157%;
-    padding: 0 195px;
+    padding: 0 316px;
     display: flex;
     align-items: center;
 
+    @media (max-width: $screen-xl) {
+      padding: 0 120px;
+      margin-top: 40px;
+    }
+
     @media (max-width: $screen-lg) {
-      padding: 0 145px;
+      padding: 0 125px;
+    }
+
+    @media (max-width: $screen-md) {
+      flex-direction: column;
+    }
+
+    @media (max-width: $screen-sm) {
+      padding: 0;
     }
   }
 
@@ -69,16 +110,38 @@
     @media (min-width: $screen-md) {
       margin-left: 5%;
     }
+
+    @media (max-width: $screen-md) {
+      margin-left: 0%;
+    }
+
+    @media (max-width: $screen-sm) {
+      margin-left: 0;
+      order: -1;
+      margin-bottom: 33px;
+    }
   }
 
   &__text {
     margin: 0;
+
+    @media (max-width: $screen-sm) {
+      font-size: 12px;
+    }
   }
 
   &__link {
     display: block;
 
     margin-top: 6.586%;
+
+    @media (max-width: $screen-md) {
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: $screen-sm) {
+      margin-top: 15px;
+    }
   }
 
   .logo {

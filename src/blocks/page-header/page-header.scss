@@ -24,6 +24,18 @@
 
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: $screen-sm) {
+      position: absolute;
+      top: 0;
+      flex-direction: column;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ffffff;
+      z-index: 5;
+      width: 100%;
+      align-content: center;
+    }
   }
 
   &__wrapper {
@@ -63,6 +75,12 @@
 
   &__nav-item {
     margin-right: 1.8em;
+
+    @media (max-width: $screen-sm) {
+      margin-right: 0;
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__link {

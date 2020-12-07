@@ -10,12 +10,11 @@
 
   &__inner {
     padding: 0 60px;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid rgba(112, 112, 112, 0.5);
     margin-bottom: 5.5%;
 
     @media (max-width: $screen-sm) {
       padding: 0;
-      border-top: 1px solid rgba(112, 112, 112, 0.5)
      }
   }
 

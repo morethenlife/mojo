@@ -1,0 +1,12 @@
+// В этом файле должны быть стили для БЭМ-блока home-block, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.home-block {
+
+  $block-name:                &; // #{$block-name}__element
+
+  #{$block-name}__inner {
+    @include container;
+  }
+}

@@ -4,9 +4,6 @@ const slick = require('slick-slider');
 
 ready(function(){
   const $bannerSlider = $('.js-home-slider');
-  const $title = $('.js-slider-title');
-  const $text = $('.js-slider-text');
-  const $link = $('.js-slider-link');
 
   $bannerSlider.slick({
     arrows: false,

@@ -13,19 +13,84 @@
 
   &__list {
     @include reset-list;
-
     display: flex;
     flex-wrap: wrap;
+
+    &--home {
+      width: 100%;
+      padding: 70px 0 0;
+      margin: 0 !important;
+
+      @media (max-width: $screen-sm) {
+        padding: 30px 0 0;
+      }
+
+      .slick-list {
+        width: 100%;
+      }
+
+      .slick-next {
+        @extend .icon--arrow-slider;
+      }
+
+      .slick-prev {
+        @extend .icon--arrow-slider;
+        transform: rotate(-180deg);
+
+        &.slick-disabled {
+          display: none !important;
+        }
+      }
+
+      .slick-arrow {
+
+        &:before {
+          display: none;
+        }
+      }
+
+      .slick-dots {
+        bottom: 14px;
+
+        li {
+          margin: 0;
+          height: 1px;
+          transition: all $transition-time ease-in-out;
+
+          &.slick-active {
+
+            button {
+              background-color: $black;
+            }
+          }
+        }
+
+        button {
+          width: 100%;
+          height: 1px;
+          padding: 0;
+          margin: 0;
+          background-color: rgba(112, 112, 112, 0.5);
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   &__item {
+    display: flex !important;
     flex-basis: 25%;
-    position: relative;
-    display: flex;
     flex-direction: column;
     align-items: center;
-
+    position: relative;
+    text-decoration: none;
+    color: $black;
+    padding-bottom: 20px;
     margin-bottom: 20px;
+    transition: all $transition-time ease-in-out;
 
     @media (max-width: $screen-sm) {
       flex-basis: 100%;
@@ -33,50 +98,52 @@
 
     img {
       display: block;
-      margin-bottom: 100px;
-
-      @media (max-width: $screen-sm) {
-        margin-bottom: 20px;
-      }
     }
 
     &:hover,
     &:focus {
+      color: $black;
       background-color: $block-hover-color;
       cursor: pointer;
 
       .goods__inner {
-        display: block;
+        opacity: 1;
+        visibility: visible;
       }
 
       .goods__select {
-        display: block;
+        opacity: 1;
       }
 
       @media (max-width: $screen-sm) {
         background-color: transparent;
       }
     }
+
+    &--home {
+      width: 20%;
+      flex-basis: 20%;
+    }
   }
 
   &__select {
     position: absolute;
-    width: 21px;
-    height: 21px;
+    z-index: 1;
     top: 14px;
     right: 16px;
+    width: 21px;
+    height: 21px;
     background-color: #ffffff;
     border-radius: 50%;
-    z-index: 1;
-    display: none;
+    opacity: 0;
 
     @media (max-width: $screen-sm) {
-      display: block;
+      top: 42px;
+      right: 36px;
+      opacity: 1;
       background-color: rgba($color: #000000, $alpha: 0.05);
       width: 30px;
       height: 30px;
-      top: 42px;
-      right: 36px;
     }
 
     &--checked {
@@ -118,15 +185,12 @@
   }
 
   &__title {
+    max-width: 200px;
     font-size: 14px;
     line-height: 14px;
     font-weight: 500;
     text-align: center;
-
-    margin: 0;
-    margin-bottom: 25px;
-
-    max-width: 200px;
+    margin: 0 0 25px;
     padding: 0 20px;
 
 
@@ -152,12 +216,13 @@
   }
 
   &__inner {
-    display: none;
-    margin-top: -120px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all $transition-time ease-in-out;
 
     @media (max-width: $screen-sm) {
-      display: block;
-      margin-top: -70px;
+      opacity: 1;
+      visibility: visible;
     }
   }
 }

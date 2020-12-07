@@ -21,11 +21,27 @@
 
   &__main-title {
     @include h2-style;
+    font-weight: 400;
     margin-bottom: 6%;
     text-align: center;
+
+    @media (max-width: $screen-sm) {
+      font-size: 22px;
+    }
   }
 
-  .goods__inner {
-    // margin-top: -140px;
+  .goods__item {
+    img {
+      @media (max-width: $screen-sm) {
+        max-width: fit-content;
+      }
+    }
+  }
+
+  .goods__list {
+    flex-wrap: nowrap;
+    --n: 1;
+    width: calc(var(--n)*100%);
+    overflow-y: hidden;
   }
 }

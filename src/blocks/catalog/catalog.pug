@@ -20,10 +20,6 @@ mixin catalog(text, mods)
 
   .catalog(class=allMods)&attributes(attributes)
     .catalog__inner
-      .logo__wrapper
-        +logo(false)
-          img(src='img/logo.svg', alt='Logo', width='81', height='21')
-
       .breadcrumbs
         +breadcrumbs()
           +breadcrumbs-item('Все товары')

@@ -11,6 +11,7 @@
   &__mail-link {
     display: block;
     color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
 
     &:hover,
     &:focus {
@@ -23,6 +24,12 @@
     margin: 0;
     margin-top: 30px;
     margin-bottom: 25px;
+
+    @media (max-width: $screen-sm) {
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 12px;
+     }
   }
 
   &__mail-link {

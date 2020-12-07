@@ -7,15 +7,14 @@ block meta
 //- block append head
 //-   link(rel='stylesheet', href='css/some.css')
 
-block nav
-  +navigation
+//- block nav
+//-   +navigation
 
 block content
   main
     .logo__wrapper
       +logo('/')
         img(src='img/logo.svg', alt='Logo', width='81', height='21')
-
     .breadcrumbs
       +breadcrumbs()
         +breadcrumbs-item('Все товары')

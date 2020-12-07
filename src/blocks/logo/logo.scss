@@ -10,6 +10,7 @@
   white-space: nowrap;
 
   // @include container();
+  // padding: 0;
 
   img {
     display: block;
@@ -18,5 +19,8 @@
 
   &__wrapper {
     @include container();
+    // padding: 0;
+
+    // display: none;
   }
 }

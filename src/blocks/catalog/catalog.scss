@@ -13,6 +13,15 @@
 
     img {
       margin-bottom: 60px;
+
+      @media (max-width: $screen-sm) {
+        max-width: fit-content;
+        margin: 0 -22px;
+      }
+    }
+
+    @media (max-width: $screen-sm) {
+      margin-bottom: 30px;
     }
   }
 
@@ -57,12 +66,25 @@
 
   .goods__list {
     flex-wrap: nowrap;
+
+    @media (max-width: $screen-sm) {
+      order: -1;
+      margin-bottom: 50px;
+      border-bottom: 1px solid #b3b3b3;
+      --n: 1;
+      width: calc(var(--n)*100%);
+      overflow-y: hidden;
+    }
   }
 
   &__content {
     @include container();
 
     margin-bottom: 5.5%;
+
+    @media (max-width: $screen-sm) {
+      padding: 0 22px;
+    }
   }
 
   &__list {
@@ -71,6 +93,11 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+
+    @media (max-width: $screen-sm) {
+      margin-bottom: 30px;
+      flex-wrap: nowrap;
+    }
   }
 
   &__item {
@@ -82,10 +109,22 @@
     &:not(:last-child) {
       margin-bottom: 5.556%;
     }
+
+    @media (max-width: $screen-sm) {
+      border-bottom: none;
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__main-title {
     @include h2-style;
+
+    @media (max-width: $screen-sm) {
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
   }
 
   p {
@@ -95,6 +134,10 @@
 
   &__text {
     margin-bottom: 60px;
+
+    @media (max-width: $screen-sm) {
+      font-size: 12px;
+    }
   }
 
   &__link {
@@ -103,11 +146,19 @@
     width: fit-content;
     padding: 11.5px 48px;
     text-align: center;
+
+    @media (max-width: $screen-sm) {
+      width: 100%;
+    }
   }
 
   &__link-wrapper {
     img {
       margin-left: 14px;
     }
+  }
+
+  .catalog__logo {
+    @include container();
   }
 }

@@ -5,30 +5,63 @@
 .privacy {
   $block-name:                &; // #{$block-name}__element
 
-  margin: 200px 0;
+  margin: 10.5% 0;
+
+  @media (max-width: $screen-md) {
+    margin-top: 44px;
+    margin-bottom: 78px;
+  }
 
   &__logo-wrapper {
-    margin-bottom: -53px;
     @include container();
+
+    margin-bottom: -53px;
+
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+
+    @media (max-width: $screen-md) {
+      margin-bottom: 0;
+    }
   }
 
   &__main-title {
-    font-size: 28px;
-    line-height: 28px;
+    @include h2-style;
+
     font-weight: 400;
     margin: 0;
     margin-bottom: 25px;
+
+    @media (max-width: $screen-sm) {
+      font-size: 22px;
+      margin-bottom: 58px;
+    }
   }
 
   &__title {
     font-weight: 600;
     margin: 0;
     margin-bottom: 25px;
+
+    @media (max-width: $screen-sm) {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+    }
   }
 
   &__wrapper {
     @include container();
-    padding: 0 195px;
+    padding: 0 316px;
+
+    @media (max-width: $screen-md) {
+      padding: 0 120px;
+    }
+
+    @media (max-width: $screen-sm) {
+      padding: 0 22px;
+    }
   }
 
   &__list {
@@ -37,6 +70,10 @@
 
   &__item {
     margin-bottom: 50px;
+
+    @media (max-width: $screen-sm) {
+      margin-bottom: 42px;
+    }
   }
 
   &__text {
@@ -44,6 +81,10 @@
 
     &--margin {
       margin-bottom: 25px;
+    }
+
+    @media (max-width: $screen-sm) {
+      font-size: 12px;
     }
   }
 }

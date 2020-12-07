@@ -11,31 +11,46 @@
   margin-top: 10.43%;
   margin-bottom: 24%;
 
+  @media (max-width: $screen-lg) {
+    padding: 0;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding: 0 22px;
+  }
+
   &__inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     // padding: 0 10.834%;
-    padding: 0 195px;
+    padding: 0 125px;
 
-    @media (max-width: $screen-xxl) and (min-width: $screen-xl) {
+    @media (max-width: $screen-md) {
       padding: 0 125px;
     }
 
-    @media (max-width: $screen-xl) and (min-width: $screen-lg) {
-      padding: 0 145px;
-    }
-
-    @media (max-width: $screen-lg) and (min-width: $screen-md) {
-      padding: 0 125px;
+    @media (max-width: $screen-sm) {
+      padding: 0;
+      flex-direction: column;
+      align-content: center;
     }
   }
 
   &__list {
     @include reset-list;
-    // margin-right: 5.556%;
+
     margin: 0 20px;
     margin-bottom: 40px;
+
+    @media (max-width: $screen-sm) {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: $screen-lg) {
+      margin: 0;
+      margin-bottom: 40px;
+    }
   }
 
   &__item {
@@ -50,27 +65,36 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: -190px;
+    left: -135px;
 
-    @media (max-width: $screen-xxl) and (min-width: $screen-xl) {
+    @media (max-width: $screen-xl) {
       left: -135px;
     }
 
-    @media (max-width: $screen-xl) and (min-width: $screen-lg) {
-      left: -160px;
+    @media (max-width: $screen-lg) {
+      left: 0;
+      top: -70px;
     }
 
-    @media (max-width: $screen-lg) and (min-width: $screen-md) {
-      left: -140px;
+    @media (max-width: $screen-md) {
+      top: -60px;
+    }
+
+    @media (max-width: $screen-sm) {
+      display: none;
     }
   }
 
   &__title {
-    font-size: 28px;
-    line-height: 28px;
+    @include h2-style;
+
     font-weight: 400;
     margin: 0;
     margin-bottom: 25px;
+
+    @media (max-width: $screen-sm) {
+      font-size: 22px;
+    }
   }
 
   p {
@@ -80,6 +104,10 @@
   &__adress,
   &__tel {
     display: block;
+
+    @media (max-width: $screen-sm) {
+      font-size: 12px;
+    }
   }
 
   &__logo-wrapper {

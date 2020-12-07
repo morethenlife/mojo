@@ -34,7 +34,9 @@ mixin team(text, mods)
             p.press__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             a.press__link(href="#")
               img(src="img/arrow-link.svg" width="30" height="13")
-          img.press__img(src="img/teammate-aleksandra@1x.jpg" width="300" height="300" alt="Александра")
+          picture.team__img-wrapper
+            source(srcset="img/teammate-aleksandra-mobile@1x.jpg 1x, img/teammate-aleksandra-mobile@2x.jpg 2x" media="(max-width: 768px)")
+            img(src="img/teammate-aleksandra@1x.jpg" srcset="img/teammate-aleksandra@2x.jpg 2x" width="300" height="300" alt="Александра").press__img
       li.press__item
         .press__item-inner
           .press__wrapper
@@ -42,7 +44,9 @@ mixin team(text, mods)
             p.press__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             a.press__link(href="#")
               img(src="img/arrow-link.svg" width="30" height="13")
-          img.press__img(src="img/teammate-kaleriya@1x.jpg" width="300" height="300" alt="Калерия")
+          picture.team__img-wrapper
+            source(srcset="img/teammate-kaleriya-mobile@1x.jpg 1x, img/teammate-kaleriya-mobile@2x.jpg 2x" media="(max-width: 768px)")
+            img(src="img/teammate-kaleriya@1x.jpg" srcset="img/teammate-kaleriya@2x.jpg 2x" width="300" height="300" alt="Александра").press__img
       li.press__item
         .press__item-inner
           .press__wrapper
@@ -50,7 +54,9 @@ mixin team(text, mods)
             p.press__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             a.press__link(href="#")
               img(src="img/arrow-link.svg" width="30" height="13")
-          img.press__img(src="img/teammate-aleksandra@1x.jpg" width="300" height="300" alt="Александра")
+          picture.team__img-wrapper
+            source(srcset="img/teammate-aleksandra-mobile@1x.jpg 1x, img/teammate-aleksandra-mobile@2x.jpg 2x" media="(max-width: 768px)")
+            img(src="img/teammate-aleksandra@1x.jpg" srcset="img/teammate-aleksandra@2x.jpg 2x" width="300" height="300" alt="Александра").press__img
       li.press__item
         .press__item-inner
           .press__wrapper
@@ -58,4 +64,6 @@ mixin team(text, mods)
             p.press__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             a.press__link(href="#")
               img(src="img/arrow-link.svg" width="30" height="13")
-          img.press__img(src="img/teammate-kaleriya@1x.jpg" width="300" height="300" alt="Калерия")
+          picture.team__img-wrapper
+            source(srcset="img/teammate-kaleriya-mobile@1x.jpg 1x, img/teammate-kaleriya-mobile@2x.jpg 2x" media="(max-width: 768px)")
+            img(src="img/teammate-kaleriya@1x.jpg" srcset="img/teammate-kaleriya@2x.jpg 2x" width="300" height="300" alt="Александра").press__img

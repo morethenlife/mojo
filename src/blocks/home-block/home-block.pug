@@ -23,7 +23,7 @@ mixin home-block(mods)
       .home-block__item
         .js-home-product.goods__list.goods__list--home
           -for (var i = 0; i < 3; i++)
-            a(href="#").goods__item.goods__item--home
+            a(href="ticket.html").goods__item.goods__item--home
               span.goods__select
               img(src="img/paste-popcorn@1x.png" alt="Попкорн-паста")
               .goods__inner
@@ -31,7 +31,7 @@ mixin home-block(mods)
                 .goods__wrapper
                   span.goods__weight 200 гр
                   span.goods__price 400 ₽
-            a(href="#").goods__item.goods__item--home
+            a(href="ticket.html").goods__item.goods__item--home
               span.goods__select.goods__select--checked
               img(src="img/paste-creamy@1x.png" alt="Крем-паста")
               .goods__inner
@@ -39,7 +39,7 @@ mixin home-block(mods)
                 .goods__wrapper
                   span.goods__weight 200 гр
                   span.goods__price 400 ₽
-            a(href="#").goods__item.goods__item--home
+            a(href="ticket.html").goods__item.goods__item--home
               span.goods__select
               img(src="img/paste-cookie@1x.png" alt="Бисквит-паста")
               .goods__inner
@@ -48,4 +48,65 @@ mixin home-block(mods)
                   span.goods__weight 200 гр
                   span.goods__price 400 ₽
 
-    .home-block__item
+      .home-block__item.home-block__item--p100
+        .home-block__content.press.press--m0
+          .home-block__content-info
+            h2.press__title Mojo Cacao и Саша Новикова
+            p.press__text 21 сентября мы совместно выпустили белый шоколад со вкусом свежеиспеченного бананового хлеба
+            a.press__link(href="mojo-about.html")
+              img(src="img/arrow-link.svg" alt="Далее")
+          .home-block__content-images
+            img(src="img/mojo-cacao@1x.jpg" alt="alt")
+
+      .home-block__item
+        .catalog__item.catalog__item--m0
+          .catalog__text-wrappper
+            h2.catalog__main-title.catalog__main-title--light Представляем новую ограниченную коллекцию
+            .catalog__text
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .catalog__link-wrapper
+              a(href="catalog-paste.html").catalog__link.btn Все пасты
+                img(src="img/link-arrow-right.svg" width="9" height=" 7")
+
+          .js-paste.goods__list.goods__list--home.goods__list--large
+            -for (var i = 0; i < 3; i++)
+              a(href="ticket.html").goods__item.goods__item--large
+                span.goods__select
+                img(src="img/paste-popcorn@1x.png" alt="Попкорн-паста")
+                .goods__inner
+                  h3.goods__title Паста со вкусом ореха кешью
+                  .goods__wrapper
+                    span.goods__weight 200 гр
+                    span.goods__price 400 ₽
+              a(href="ticket.html").goods__item.goods__item--large
+                span.goods__select
+                img(src="img/paste-creamy@1x.png" alt="Крем-паста")
+                .goods__inner
+                  h3.goods__title Паста со вкусом ореха кешью
+                  .goods__wrapper
+                    span.goods__weight 200 гр
+                    span.goods__price 400 ₽
+              a(href="ticket.html").goods__item.goods__item--large
+                span.goods__select
+                img(src="img/paste-cookie@1x.png" alt="Бисквит-паста")
+                .goods__inner
+                  h3.goods__title Паста со вкусом ореха кешью
+                  .goods__wrapper
+                    span.goods__weight 200 гр
+                    span.goods__price 400 ₽
+
+        .home-block__item.home-block__item--p100
+          .home-block__content.press.press--m0
+            .home-block__content-images
+              img(src="img/banana-bread@1x.jpg" alt="alt")
+            .home-block__content-info.home-block__content-info--right
+              .home-block__content-wrap
+                h2.press__title Где найти нашу продукцию
+                p.press__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                a.press__link(href="mojo-about.html")
+                  img(src="img/arrow-link.svg" alt="Далее")
+                +partners()
+
+    .mojo-about__wrapper.mojo-about__wrapper--mb100
+      h2.mojo-about__title Все коллекции нашей продукции в полном  каталоге
+      a.mojo-about__catalog-link(href="catalog-paste.html") Перейти к каталогу

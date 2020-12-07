@@ -128,7 +128,7 @@
   }
 
   &__wrapper {
-    background-color: $light-peach;
+    background-color: rgba(0,0,0,0.03);
     padding: 165px 0;
     display: flex;
     align-items: center;
@@ -141,6 +141,10 @@
       padding: 0 22px;
       padding-top: 75px;
       padding-bottom: 43px;
+    }
+
+    &--mb100 {
+      margin-bottom: 100px;
     }
   }
 

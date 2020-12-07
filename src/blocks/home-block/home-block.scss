@@ -6,7 +6,46 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  #{$block-name}__item {
+
+    &--p100 {
+      padding: 100px 0;
+    }
+  }
+
   #{$block-name}__inner {
     @include container;
+  }
+
+  #{$block-name}__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #{$block-name}__content-info {
+    width: 50%;
+    padding-right: 5%;
+
+    &--right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-right: 0;
+      padding-left: 5%;
+    }
+  }
+
+  #{$block-name}__content-wrap {
+    width: 427px;
+  }
+
+  #{$block-name}__content-images {
+    width: 50%;
+
+    img {
+      width: 100%;
+    }
   }
 }

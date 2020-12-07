@@ -5,8 +5,11 @@
 .press {
 
   $block-name:                &; // #{$block-name}__element
-
   margin-bottom: 50px;
+
+  &--m0 {
+    margin: 0;
+  }
 
   &__inner {
     position: relative;
@@ -131,9 +134,20 @@
   }
 
   &__link {
-    display: block;
-
+    display: inline-block;
     margin-top: 6.586%;
+
+    img {
+      transition: all $transition-time ease;
+    }
+
+    &:hover {
+      opacity: 0.8;
+
+      img {
+        transform: scale(1.1);
+      }
+    }
 
     @media (max-width: $screen-md) {
       margin-bottom: 25px;

@@ -86,6 +86,7 @@ body {
   text-align: left;
   color: $text-color;
   background-color: #ffffff;
+  overflow-x: hidden;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -190,6 +191,10 @@ a {
   &:focus {
     color: $link-color--hover;
     transition: $transition-time;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &[href^='tel:'] {

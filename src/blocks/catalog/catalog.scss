@@ -78,6 +78,11 @@
     }
   }
 
+  &__text-wrappper {
+    width: 35%;
+    padding-right: 35px;
+  }
+
   &__content {
     @include container();
 
@@ -102,9 +107,9 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     align-content: center;
-    border-bottom: 1px solid #b3b3b3;
     align-items: center;
 
     &:not(:last-child) {
@@ -116,6 +121,13 @@
       display: flex;
       flex-direction: column;
     }
+
+    &--m0 {
+
+      &:not(:last-child) {
+       margin: 0;
+      }
+    }
   }
 
   &__main-title {
@@ -125,6 +137,10 @@
       font-size: 22px;
       font-weight: 400;
       margin-bottom: 20px;
+    }
+
+    &--light {
+      font-weight: 400;
     }
   }
 

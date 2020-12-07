@@ -19,9 +19,25 @@ mixin navigation(mods)
     }
 
   nav.page-header__nav(class=allMods)&attributes(attributes)
+    h2.page-header__menu-title Меню
     ul.page-header__nav-list
       li.page-header__nav-item
         a.page-header__link Продукты
+        ul.page-header__mob-list
+          li.page-header__mob-item Шоколад
+            sup 64
+            ul.page-header__choco-list
+              li.page-header__choco-item Все товары категории
+              li.page-header__choco-item Молочный
+              li.page-header__choco-item Горький
+              li.page-header__choco-item Белый
+              li.page-header__choco-item Веганский
+          li.page-header__mob-item Пасты
+          li.page-header__mob-item Конфеты
+          li.page-header__mob-item Подарки
+      li.page-header__nav-item.nav-item__mob-item
+        a(href="#").page-header__link Корзина
+          +cart
       li.page-header__nav-item
         a(href="store.html").page-header__link Магазины
       li.page-header__nav-item

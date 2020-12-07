@@ -1,0 +1,33 @@
+//- Все примеси в этом файле должны начинаться c имени блока (partners)
+
+mixin partners(mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +partners('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' partners--' + modsList[i].trim();
+      }
+    }
+
+  .partners(class=allMods)&attributes(attributes)
+    .partners__item
+      img(src="img/png-clipart-coffee-cafe-starbucks-starbucks-logo-starbucks-logo-food-label@2x.jpg" alt="alt")
+    .partners__item
+      img(src="img/Ozon-new-logo-01@2x.jpg" alt="alt")
+    .partners__item
+      img(src="img/vkusvill-logo-old@2x.jpg" alt="alt")
+    .partners__item
+      img(src="img/1280px-Yandex-market.svg@2x.jpg" alt="alt")
+    .partners__item
+      img(src="img/azbuka_800x450_logo@2x.jpg" alt="alt")
+    .partners__item
+      img(src="img/unnamed@2x.jpg" alt="alt")

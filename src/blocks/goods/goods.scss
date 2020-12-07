@@ -108,6 +108,10 @@
     margin-bottom: 20px;
     transition: all $transition-time ease-in-out;
 
+    @media (max-width: $screen-md) {
+      flex-basis: 50%;
+    }
+
     @media (max-width: $screen-sm) {
       flex-basis: 100%;
     }

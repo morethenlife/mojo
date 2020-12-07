@@ -21,20 +21,29 @@ mixin navigation(mods)
   nav.page-header__nav(class=allMods)&attributes(attributes)
     h2.page-header__menu-title Меню
     ul.page-header__nav-list
-      li.page-header__nav-item
+      li.page-header__nav-item.active-link
         a.page-header__link Продукты
         ul.page-header__mob-list
-          li.page-header__mob-item Шоколад
-            sup 64
+          li.page-header__mob-item
+            a.page-header__mob-link.active-link Шоколад
+              sup 64
             ul.page-header__choco-list
-              li.page-header__choco-item Все товары категории
-              li.page-header__choco-item Молочный
-              li.page-header__choco-item Горький
-              li.page-header__choco-item Белый
-              li.page-header__choco-item Веганский
-          li.page-header__mob-item Пасты
-          li.page-header__mob-item Конфеты
-          li.page-header__mob-item Подарки
+              li.page-header__choco-item
+                a.page-header__choco-link Все товары категории
+              li.page-header__choco-item
+                a.page-header__choco-link Молочный
+              li.page-header__choco-item
+                a.page-header__choco-link.active-link Горький
+              li.page-header__choco-item
+                a.page-header__choco-link Белый
+              li.page-header__choco-item
+                a.page-header__choco-link Веганский
+          li.page-header__mob-item
+            a.page-header__mob-link Пасты
+          li.page-header__mob-item
+            a.page-header__mob-link Конфеты
+          li.page-header__mob-item
+            a.page-header__mob-link Подарки
       li.page-header__nav-item.nav-item__mob-item
         a(href="#").page-header__link Корзина
           +cart

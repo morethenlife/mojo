@@ -25,6 +25,7 @@ mixin navigation(mods)
         a.page-header__link Продукты
         ul.page-header__mob-list
           li.page-header__mob-item Шоколад
+            sup 64
             ul.page-header__choco-list
               li.page-header__choco-item Все товары категории
               li.page-header__choco-item Молочный
@@ -34,7 +35,7 @@ mixin navigation(mods)
           li.page-header__mob-item Пасты
           li.page-header__mob-item Конфеты
           li.page-header__mob-item Подарки
-      li.page-header__nav-item
+      li.page-header__nav-item.nav-item__mob-item
         a(href="#").page-header__link Корзина
           +cart
       li.page-header__nav-item

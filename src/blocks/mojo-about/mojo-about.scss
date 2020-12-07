@@ -8,7 +8,7 @@
   margin-top: 90px;
   margin-bottom: 100px;
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $screen-md) {
     margin-top: 20px;
   }
 
@@ -26,7 +26,7 @@
       top: -45px;
     }
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       display: none;
     }
   }
@@ -38,7 +38,7 @@
     margin: 0;
     margin-bottom: 25px;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       font-size: 22px;
     }
   }
@@ -62,7 +62,7 @@
       padding: 0 120px;
     }
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       padding: 0;
     }
   }
@@ -82,7 +82,7 @@
       margin-left: 5%;
     }
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       margin-left: 0;
       width: 100%;
     }
@@ -96,7 +96,7 @@
     &:nth-child(even) {
       flex-direction: row-reverse;
 
-      @media (max-width: $screen-sm) {
+      @media (max-width: $screen-md) {
         flex-direction: column;
       }
 
@@ -104,11 +104,11 @@
         margin-left: 0;
         margin-right: 16.601%;
 
-        @media (min-width: $screen-md) {
+        @media (max-width: $screen-xl) {
           margin-right: 5%;
         }
 
-        @media (max-width: $screen-sm) {
+        @media (max-width: $screen-md) {
           margin-right: 0;
         }
       }
@@ -116,13 +116,17 @@
 
     &:not(:last-child) {
       margin-bottom: 10.71%;
+
+      @media (max-width: $screen-md) {
+        margin-bottom: 0;
+      }
     }
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       flex-direction: column;
     }
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       margin-bottom: 6%;
     }
   }
@@ -134,7 +138,7 @@
     align-items: center;
     flex-direction: column;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       font-size: 12px;
       margin: 0;
       background-color: transparent;
@@ -148,7 +152,7 @@
     color: rgba(0, 0, 0, 1);
     text-decoration: none;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       padding: $field-padding-vertical  $field-padding-horizontal;
       max-width: 100%;
       display: block;
@@ -172,7 +176,7 @@
   &__inner {
     width: 50%;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       width: 100%;
       order: 1;
       padding: 0 44px;
@@ -183,7 +187,7 @@
   }
 
   &__text {
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       font-size: 12px;
       margin: 0;
     }
@@ -197,7 +201,7 @@
     @include h2-style;
     font-weight: 400;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       font-size: 22px;
       text-align: center;
     }

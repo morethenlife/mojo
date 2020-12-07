@@ -27,6 +27,10 @@
 
     margin-bottom: 20px;
 
+    @media (max-width: $screen-md) {
+      flex-basis: 50%;
+    }
+
     @media (max-width: $screen-sm) {
       flex-basis: 100%;
     }

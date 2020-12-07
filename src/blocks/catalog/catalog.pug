@@ -22,10 +22,10 @@ mixin catalog(text, mods)
     .catalog__inner
       .breadcrumbs
         +breadcrumbs()
-          +breadcrumbs-item('Все товары')
-          +breadcrumbs-item('Пасты')
-          +breadcrumbs-item('Шоколад кешью')
-          +breadcrumbs-item('Горький шоколад')
+          +breadcrumbs-item('Все товары', '#').active-link
+          +breadcrumbs-item('Пасты', '#')
+          +breadcrumbs-item('Шоколад кешью', '#')
+          +breadcrumbs-item('Горький шоколад', '#')
 
       .catalog__content
         ul.catalog__list

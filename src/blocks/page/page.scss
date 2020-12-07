@@ -185,6 +185,7 @@ a {
   &:focus {
     color: $link-color--hover;
     transition: $transition-time;
+    text-decoration: underline;
   }
 
   &[href^='tel:'] {
@@ -254,6 +255,10 @@ p {
 
 address {
   font-style: normal;
+}
+
+.active-link {
+  text-decoration: underline;
 }
 
 ul,

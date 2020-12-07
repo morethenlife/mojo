@@ -17,10 +17,10 @@ block content
         img(src='img/logo.svg' alt='Logo' width='81' height='21')
     .breadcrumbs
       +breadcrumbs()
-        +breadcrumbs-item('Все товары')
-        +breadcrumbs-item('Пасты')
-        +breadcrumbs-item('Шоколад кешью')
-        +breadcrumbs-item('Горький шоколад')
+        +breadcrumbs-item('Все товары', '#')
+        +breadcrumbs-item('Пасты', '#').active-link
+        +breadcrumbs-item('Шоколад кешью', '#')
+        +breadcrumbs-item('Горький шоколад', '#')
 
     +goods()
 

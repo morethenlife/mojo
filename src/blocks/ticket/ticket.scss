@@ -17,10 +17,12 @@
 
   &__inner {
     display: flex;
-    align-items: center;
+    // align-items: center;
+    position: relative;
     flex-wrap: wrap;
     padding: 0 7.5%;
     margin-bottom: 14%;
+    justify-content: space-between;
 
     @media (max-width: $screen-lg) {
       padding: 0;
@@ -79,11 +81,15 @@
   }
 
   &__list {
-    margin-bottom: 7.5%;
+    margin-bottom: 80px;
   }
 
   &__wrapper {
-    width: 50%;
+    width: 624px;
+
+    @media (max-width: $screen-xl) {
+      width: 50%;
+    }
 
     @media (max-width: $screen-md) {
       width: 100%;
@@ -99,6 +105,12 @@
 
   &__title-wrapper {
     margin-bottom: 48px;
+
+    @media (max-width: $screen-md) {
+      position: absolute;
+      top: 30px;
+      left: 0;
+    }
   }
 
   &__title-list {
@@ -132,9 +144,17 @@
 
   &__img-wrapper {
     width: 50%;
+    margin-left: -40px;
+    margin-top: -160px;
+
+    @media (max-width: $screen-xl) {
+      margin-top: -45px;
+    }
 
     @media (max-width: $screen-md) {
       width: 100%;
+      margin-left: 0;
+      margin-top: 0;
     }
   }
 

@@ -6,6 +6,7 @@
 
   $block-name:                &; // #{$block-name}__element
   margin-bottom: 50px;
+  margin-top: 6%;
 
   &--m0 {
     margin: 0;
@@ -16,6 +17,12 @@
   }
 
   &__wrapper {
+    width: 633px;
+
+    @media (max-width: $screen-md) {
+      width: 100%;
+    }
+
     @media (max-width: $screen-sm) {
       padding: 0 22px;
     }
@@ -28,9 +35,13 @@
     padding: 0;
 
     position: absolute;
-    top: 50%;
-    left: -195px;
-    transform: translateY(-50%);
+    top: 0;
+    left: -176px;
+    // transform: translateY(-50%);
+
+    @media (max-width: $screen-xl) {
+      left: -100px;
+    }
 
     @media (max-width: $screen-lg) {
       left: -100px;
@@ -38,11 +49,6 @@
 
     @media (max-width: $screen-sm) {
       display: none;
-    }
-
-    @media (max-width: $screen-xl) {
-      top: -50px;
-      left: 0;
     }
   }
 
@@ -84,9 +90,10 @@
   &__item-inner {
     @include container();
 
-    padding: 0 316px;
+    padding: 0 196px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     @media (max-width: $screen-xl) {
       padding: 0 120px;

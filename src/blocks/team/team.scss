@@ -6,6 +6,11 @@
 
   $block-name:                &; // #{$block-name}__element
   margin-bottom: 50px;
+  margin-top: 4.532%;
+
+  @media (max-width: $screen-xl) {
+    margin-top: 0;
+  }
 
   .press__inner {
     position: relative;
@@ -22,6 +27,14 @@
     min-width: 300px;
 
     @media (max-width: $screen-sm) {
+      width: 100%;
+    }
+  }
+
+  .press__wrapper {
+    width: 636px;
+
+    @media (max-width: $screen-md) {
       width: 100%;
     }
   }

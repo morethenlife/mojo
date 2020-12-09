@@ -81,6 +81,10 @@
   &__text-wrappper {
     width: 35%;
     padding-right: 35px;
+
+    @media (max-width: $screen-md) {
+      width: 100%;
+    }
   }
 
   &__content {

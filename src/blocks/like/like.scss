@@ -6,6 +6,8 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  margin-bottom: 40px;
+
   &__inner {
     @include container();
     padding: 0 7.5%;
